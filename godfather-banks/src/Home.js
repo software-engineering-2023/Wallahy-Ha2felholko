@@ -1,6 +1,8 @@
 import './Home.css';
 import logo from './nobg-logo.png';
 
+import {Link} from 'react-router-dom';
+
 function Home() {
     return (
       <div className="Home">
@@ -17,7 +19,7 @@ function Home() {
               <li><a href="/contact">Contact</a></li>
             </ul>
             <div className="user-area">
-              <button className="login-button">Login</button>
+              <Link to ='/login'><button className="login-button">Login</button></Link>
               <button className="register-button">Register</button>
             </div>
           </nav>
