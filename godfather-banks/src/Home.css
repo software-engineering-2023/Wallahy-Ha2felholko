@@ -23,12 +23,14 @@ body {
   }
   
   .navigation ul {
+    padding-inline-start: 0px;
     list-style: none;
     display: flex;
   }
   
   .navigation li {
-    margin-left: 20px;
+    text-align: center;
+    margin-right: 20px;
   }
   
   .navigation a {
@@ -110,6 +112,10 @@ body {
   
   /* Footer Styles */
   .footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    right:0;
     background-color: #303F9F;
     color: #FFFFFF;
     padding: 20px;
