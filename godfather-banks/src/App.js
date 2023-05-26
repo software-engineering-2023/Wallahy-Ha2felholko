@@ -16,6 +16,7 @@ function App() {
             </Route>
             <Route exact path="/Banker">
               <Banker />
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
