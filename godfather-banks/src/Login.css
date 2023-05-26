@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styles */
+  .login-header {
+    background-color: #303F9F;
+    padding: 10px;
+  }
+  
+  .login-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+  }
+  
+  .login-logo h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Content Styles */
+  .login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .login-form {
+    background-color: #FFFFFF;
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    background-color: #3F51B5;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Footer Styles */
+  .login-footer {
+    background-color: #303F9F;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .login-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-logo img {
+    height: 40px; /* Adjust the height as per your logo size */
+    margin-right: 10px;
+  }
+  
+  .login-form .error {
+    border: 2px solid red;
+  }
+  
+  .login-form .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .login-button:hover {
+    background-color: #303f9f;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #303f9f;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .home-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #303f9f;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #303f9f;
+    border-radius: 5px;
+  }
+  
+  .home-button:hover {
+    background-color: #0c7be2;
+    color: #ffffff;
+  }
