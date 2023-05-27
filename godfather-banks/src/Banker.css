@@ -20,11 +20,14 @@ body {
   .logo h1 {
     font-size: 24px;
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   
   .navigation ul {
     padding-inline-start: 0px;
-    margin-right: 155px;
+    margin-right: 160px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -60,10 +63,6 @@ body {
     cursor: pointer;
   }
 
-  .body-n-footer {
-    flex-grow: 1; /* Allow the body to grow and fill the remaining space */
-  }
-
   .body {
     margin: 3px;
     display: flex;
@@ -86,10 +85,12 @@ body {
 
   .button-group button:first-child {
     margin-right: 4px;
+    cursor: pointer;
   }
 
   .button-group button:last-child {
     margin-left: 4px;
+    cursor: pointer;
   }
 
   button{
@@ -123,7 +124,8 @@ body {
     border-radius: 4px;
   }
   
-  .Requests {
+  .Requests,
+  .Notifications {
     padding: 10px;
     color:#4e535e;
     margin-bottom: 5px;
@@ -133,17 +135,38 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
   }
   
   .RemainingRectangle {
-    text-align: center;
     width: 1040px;
     margin-left: 3px;
     background-color: #f0f0f0;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
   }
+
+  .SelectedRequest h2{
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .SelectedRequest p1{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .RemainingRectangle h6{
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
   
+  .RemainingRectangle p{
+    text-align: center;
+  }
+
   .footer {
     position: absolute;
     left:0;

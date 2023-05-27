@@ -4,16 +4,28 @@ import React, { useState } from 'react';
 
 function Banker() {
   const [selectedButton, setSelectedButton] = useState(null);
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const [selectedNotif, setSelectedNotif] = useState(null);
 
   const handleButtonClick = (button) => {
       setSelectedButton(button);
+      setSelectedRequest(null);
   };
-    const messages = [
-      "Hello",
-      "How are you?",
-      "I'm doing great!",
-      "This is a sample messageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee KALAM KETEEERRRRR",
-      "React is awesome!",
+
+  const handleClick = (requests) => {
+    setSelectedRequest(requests);
+  };
+
+  const handleClick2 = (notifications) => {
+    setSelectedNotif(notifications);
+  };
+
+    const requests = [
+      "Request 1",
+      "Request 2",
+      "Request 3",
+      "Request 44444444444444444444444444444444444444444444444444 with some extra text to overflow",
+      "Request 5",
       "Have a nice day!",
       "Have a nice day!",
       "Have a nice day!",
@@ -33,9 +45,34 @@ function Banker() {
       "Have a nice day!",
     ];
 
-    const handleClick = (message) => {
-      console.log(`Clicked message: ${message}`);
-    };
+    const notifications = [
+      "notification 1",
+      "notification 2",
+      "notification 3",
+      "notification 44444444444444444444444444444444444444444444444444 i see u switched :)",
+      "notification 5",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!",
+    ];
 
     return (
       <div className="Banker">
@@ -47,7 +84,6 @@ function Banker() {
             </div>
             <div className="control">
               <ul>
-                <li><a href="/" className="active">Home</a></li>
                 <li><a href="/services">Services</a></li>
               <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
@@ -58,7 +94,6 @@ function Banker() {
             </div>
           </nav>
         </header>
-        <div className="body-n-footer">
         <div className="body">
           <div className="List">
           <div className="button-group">
@@ -76,19 +111,40 @@ function Banker() {
           </button>
           </div>
             <div className="RequestList">
-              {messages.map((message, index) => (
+              {selectedButton === 'button1' ? (
+              requests.map((requests, index) => (
                 <a
                   key={index}
                   className="Requests"
-                  onClick={() => handleClick(message)}
+                  onClick={() => handleClick(requests)}
                 >
-                  {message}
+                  {requests}
                 </a>
-              ))}
+              ))
+            ) : (
+              notifications.map((notification, index) => (
+                <a
+                  key={index}
+                  className="Notifications"
+                  onClick={() => handleClick2(notification)}
+                >
+                  {notification}
+                </a>
+            )))
+              }
             </div>
+            
           </div>
         <div className="RemainingRectangle">
-          HERE TO DISPLAY THE FULL MESSAGE
+        {selectedRequest ? (
+              <div className="SelectedRequest">
+                <h2>Request from *ADD USERNAME HERE*:</h2>
+                <p1>{selectedRequest}</p1>
+                <h6>*ADD TIME SENT HERE*</h6>
+              </div>
+            ) : (
+              <p>Select from the panel to display</p>
+            )}
         </div>
       </div>
         <footer className="footer">
@@ -100,7 +156,6 @@ function Banker() {
             </ul>
           </div>
         </footer>
-        </div>
       </div>
     );
 }
