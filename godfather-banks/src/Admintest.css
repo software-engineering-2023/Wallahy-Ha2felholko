@@ -247,15 +247,15 @@
   
   .button-arounder {
     font-size: 2rem;
-    background: hsl(216, 70%, 46%);
+    background:hsl(216, 81%, 60%);
     color: hsl(190deg, 10%, 95%);
     position: absolute;  /* Set the button to absolute positioning */
-    top: 76%;           /* Adjust the top position value */
-    left: 82%;          /* Adjust the left position value */
+    top: 120%;           /* Adjust the top position value */
+    left: 18%;          /* Adjust the left position value */
     transform: translate(-50%, -50%);  /* Center the button using translate */
     
     box-shadow: 0 0px 0px hsla(194, 82%, 37%, 0.575);
-    transfrom: translateY(0);
+    transfrom:translateY(0);
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -287,6 +287,38 @@
   }
   
  
+  .stolen-card {
+    color: rgb(67, 9, 201);
+  }
+  .testing {
+    position: absolute;
+    top: 70px;
+    left: 420px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
   
- 
+  .testing h5 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px; /* Optional: Adds some spacing between the line and text */
+  }
   
+  .testing .account-name {
+    display: inline-block;
+    border-bottom: none; /* Optional: Removes the line for Account Name */
+  }
+  .hacked-bank-account {
+    /* Add your custom styling for the "Hacked Bank Account" request */
+  }
+  
+  .damaged-card {
+    /* Add your custom styling for the "Damaged Card" request */
+  }
+  
+  .technical-issue {
+    /* Add your custom styling for the "Technical Issue" request */
+  }
+  
+  /* Add more CSS styles for other class names */
+
+

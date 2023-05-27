@@ -1,43 +1,145 @@
 import React from 'react';
 import './Admintest.css';
 import logo from './nobg-logo.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Admintest() {
   const [selectedButton, setSelectedButton] = useState(null);
   const [selectedRequest, setSelectedRequest] = useState(null);
   
 
+
+  
+  const [requests, setRequests] = useState([
+    {
+      name: "Stolen Card",
+      description: " ",
+      styleClass: "stolen-card",
+      additionalContent: (
+        <div className="testing">
+          <h1> Request: Stolen Card
+
+          </h1>
+          <h5>
+              Account ID:
+            
+          </h5>
+          <h5> Account Name:</h5>
+          <h5> Date: </h5>
+          
+
+          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <div className='button1'>
+          <button className="button-arounder" onClick={() => handleRequestHandled("Stolen Card")}>Proceed</button> 
+        </div>
+          
+        </div>
+      ),
+      
+    },
+    {
+      name: "Hacked Bank Account",
+      description: "My bank account got hacked. Need assistance.",
+      styleClass: "hacked-bank-account",
+      additionalContent: (
+        <div className="testing">
+          <h1> Request: Stolen Card
+
+          </h1>
+          <h5>
+              Account ID:
+            
+          </h5>
+          <h5> Account Name:</h5>
+          <h5> Date: </h5>
+          
+
+          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <div className='button1'>
+          <button className="button-arounder" onClick={() => handleRequestHandled("Hacked Bank Account")}>Proceed</button> 
+        </div>
+          
+        </div>
+      ),
+    },
+    {
+      name: "Damaged Card",
+      description: "Please help with my stolen card issue.",
+      styleClass: "damaged-card",
+      additionalContent: (
+        <div className="testing">
+          <h1> Request: Stolen Card
+
+          </h1>
+          <h5>
+              Account ID:
+            
+          </h5>
+          <h5> Account Name:</h5>
+          <h5> Date: </h5>
+          
+
+          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <div className='button1'>
+          <button className="button-arounder" onClick={() => handleRequestHandled("Damaged Card")}>Proceed</button> 
+        </div>
+          
+        </div>
+      ),
+      
+    },
+    {
+      name: "Technical Issue",
+      description: "Please help with my stolen card issue.",
+      styleClass: "technical-issue",
+      additionalContent: (
+        <div className="testing">
+          <h1> Request: Stolen Card
+
+          </h1>
+          <h5>
+              Account ID:
+            
+          </h5>
+          <h5> Account Name:</h5>
+          <h5> Date: </h5>
+          
+
+          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <div className='button1'>
+          <button className="button-arounder" onClick={() => handleRequestHandled("Technical Issue")}>Proceed</button> 
+        </div>
+          
+        </div>
+      ),
+    },
+    // Add more request objects with different details
+  ]);
+
+  
+
   const handleButtonClick = (button) => {
-      setSelectedButton(button);
-      setSelectedRequest(null);
+    setSelectedButton(button);
+    setSelectedRequest(null);
   };
 
   const handleClick = (request) => {
-    // Find the selected request object by its name
     const selectedRequestObj = requests.find((r) => r.name === request);
     setSelectedRequest(selectedRequestObj);
   };
 
+  const handleRequestHandled = (requestName) => {
+    const updatedRequests = requests.filter((request) => request.name !== requestName);
+    setRequests(updatedRequests);
+    setSelectedRequest(null);
+  };
   
-
-    const requests = [
-      {
-        name: "Stolen Card",
-        description: "Please help with my stolen card issue.",
-      },
-      {
-        name: "Hacked Bank Account",
-        description: "My bank account got hacked. Need assistance.",
-      },
-      // Add more request objects with different details
-    
-    ];
+  
 
     
 
     return (
-      <div className="Banker">
+      <div className="Admintest">
          <header className="header">
           <nav className="navigation">
            <div className="logo">
@@ -81,21 +183,19 @@ function Admintest() {
           </div>
         </div>
         <div className="RemainingRectangle">
-        {selectedRequest ? (
-              <div className="SelectedRequest">
-                <h2>Request from *ADD USERNAME HERRRRRRRRRRRRE*:</h2>
-                <div className='RequestInfo>'> 
-                {selectedRequest.description} 
-                <div class="buttons-container">
-  <button className="button-arounder">Procced</button>
-</div>
-                </div>
-                
-                <h6>*ADD TIME SENT HERE*</h6>
-              </div>
-            ) : (
-              <p>Select from the panel to display</p>
-            )}
+      {selectedRequest ? (
+        <div className="SelectedRequest">
+          
+          <div className={`RequestInfo ${selectedRequest.styleClass}`}>
+            {selectedRequest.description}
+          </div>
+          
+          <h6>*ADD TIME SENT HERETESTTTTTTTTTT*</h6>
+          {selectedRequest.additionalContent}
+        </div>
+      ) : (
+        <p>Select from the panel to display</p>
+      )}
         </div>
       </div>
         <footer className="footer">
