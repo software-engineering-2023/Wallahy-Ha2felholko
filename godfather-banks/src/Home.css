@@ -17,6 +17,15 @@ body {
     color: #FFFFFF;
   }
   
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Adjust the height as per your logo size */
+    margin-right: 10px;
+  }
   .logo h1 {
     font-size: 24px;
     margin: 0;
@@ -59,7 +68,7 @@ body {
   .hero-section {
     background-color: #3F51B5;
     color: #FFFFFF;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
   }
   
@@ -73,21 +82,12 @@ body {
     margin-bottom: 40px;
   }
   
-  .learn-more-button {
-    background-color: #FFFFFF;
-    color: #3F51B5;
-    border: none;
-    border-radius: 4px;
-    padding: 12px 24px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-  }
   
   .features-section {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    position: relative;
   }
   
   .feature-card {
@@ -109,6 +109,25 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
   }
+
+  .learn-more-container {
+    text-align: center;
+    margin-top: 30px; /* Adjust as needed */
+  }
+  
+  .learn-more-button {
+    background-color: #3F51B5; /* Blue color */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #303F9F; /* Darker blue on hover */
+  }
   
   /* Footer Styles */
   .footer {
@@ -118,7 +137,7 @@ body {
     right:0;
     background-color: #303F9F;
     color: #FFFFFF;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
   }
   
@@ -142,13 +161,4 @@ body {
   .footer ul li a {
     color: #FFFFFF;
     text-decoration: none;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 40px; /* Adjust the height as per your logo size */
-    margin-right: 10px;
   }

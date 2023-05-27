@@ -2,6 +2,7 @@
 import Home from './Home';
 import Banker from './Banker';
 import Login from  './Login';
+import Register from './Register';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
  
@@ -14,11 +15,14 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/Banker">
-              <Banker />
-            </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/Banker">
+              <Banker />
             </Route>
           </Switch>
        </div>

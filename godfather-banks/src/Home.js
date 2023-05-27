@@ -16,7 +16,7 @@ function Home() {
               <li><a href="/" className="active">Home</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/contact">Contact us</a></li>
             </ul>
             <div className="user-area">
               <Link to ='/login'><button className="login-button">Login</button></Link>
@@ -28,11 +28,8 @@ function Home() {
           <div className="hero-section">
             <h2>Welcome to Godfather Banks</h2>
             <p>
-              We provide comprehensive banking solutions with a personal touch.
-              At Godfather Banks, we go the extra mile to provide you with tailored banking solutions, 
-              combining expertise and a personal touch for a seamless financial experience.
+              TRUST YOU MUST
             </p>
-            <button className="learn-more-button">Learn More</button>
           </div>
           <div className="features-section">
             <div className="feature-card">
@@ -56,7 +53,11 @@ function Home() {
               <h3>Credit Cards</h3>
               <p>Enjoy exclusive rewards with our credit cards.</p>
             </div>
+
           </div>
+          <div className="learn-more-container">
+              <button className="learn-more-button">Learn More</button>
+            </div>
         </main>
         <footer className="footer">
           <div className="footer-content">
