@@ -1,0 +1,52 @@
+.registration-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .registration-heading {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .registration-form {
+    width: 400px;
+  }
+  
+  .registration-step {
+    margin-bottom: 20px;
+  }
+  
+  .registration-step h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .registration-step input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .registration-step button {
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+  
+  .registration-step button:last-child {
+    margin-right: 0;
+  }
+  
+  .registration-step button:hover {
+    background-color: #303f9f;
+    color: #ffffff;
+  }
+  
+  .registration-step button:disabled {
+    background-color: #cccccc;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
+  

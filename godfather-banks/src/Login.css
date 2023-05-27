@@ -116,18 +116,17 @@ body {
   }
   
   .home-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #303f9f;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 5px;
-    border: 1px solid #303f9f;
-    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #303F9F;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
   }
   
   .home-button:hover {
-    background-color: #0c7be2;
+    background-color: #3070ac;
     color: #ffffff;
   }
