@@ -2,6 +2,7 @@
 import Home from './Home';
 import Banker from './Banker';
 import Login from  './Login';
+import Admintest from './Admintest';
 import Register from './Register';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/admin">
+              <Admintest />
             </Route>
             <Route exact path="/register">
               <Register />
