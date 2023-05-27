@@ -117,7 +117,7 @@ const Register = () => {
                 />
 
                 <div className="registration-navigation-buttons">
-                <li class="no-account-link"><a href="/register">No Bank Account? Create Now</a></li>
+                <li class="no-account-link"><a href="/registerBankAccount">No Bank Account? Create Now</a></li>
                   <button type="submit" className="next-button">
                     Next
                   </button>
@@ -181,7 +181,7 @@ const Register = () => {
                 />
 
                 <div className="registration-navigation-buttons">
-                <li class="no-account-link"><a href="/register">No Bank Account? Create Now</a></li>
+                <li class="no-account-link"><a href="/registerBankAccount">No Bank Account? Create Now</a></li>
                   <button type="button" className="previous-button" onClick={handlePreviousStage}>
                     Previous
                   </button>
