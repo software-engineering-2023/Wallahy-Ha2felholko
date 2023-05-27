@@ -5,132 +5,215 @@ import React, { useState } from 'react';
 
 
 const Register = () => {
-    const [step, setStep] = useState(1);
-    const [formData, setFormData] = useState({
-      fullName: '',
-      email: '',
-      password: '',
-      address: '',
-      phoneNumber: '',
-      accountNumber: '',
-      creditCardNumber: '',
-    });
-  
-    const handleNextStep = () => {
-      setStep((prevStep) => prevStep + 1);
-    };
-  
-    const handlePreviousStep = () => {
-      setStep((prevStep) => prevStep - 1);
-    };
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // Handle form submission logic
-    };
-  
-    return (
-      <div className="registration-page">
-        <h1 className="registration-heading">Create an Account</h1>
-  
-        <form className="registration-form" onSubmit={handleSubmit}>
-          {step === 1 && (
-            <div className="registration-step">
-              <h2>Personal Information</h2>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-              <button type="button" onClick={handleNextStep}>
-                Next
-              </button>
-            </div>
-          )}
-  
-          {step === 2 && (
-            <div className="registration-step">
-              <h2>Contact Information</h2>
-              <input
-                type="text"
-                name="address"
-                placeholder="Address"
-                value={formData.address}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="tel"
-                name="phoneNumber"
-                placeholder="Phone Number"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-              />
-              <button type="button" onClick={handlePreviousStep}>
-                Previous
-              </button>
-              <button type="button" onClick={handleNextStep}>
-                Next
-              </button>
-            </div>
-          )}
-  
-          {step === 3 && (
-            <div className="registration-step">
-              <h2>Bank Information</h2>
-              <input
-                type="text"
-                name="accountNumber"
-                placeholder="Account Number"
-                value={formData.accountNumber}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="creditCardNumber"
-                placeholder="Credit Card Number"
-                value={formData.creditCardNumber}
-                onChange={handleChange}
-                required
-              />
-              <button type="button" onClick={handlePreviousStep}>
-                Previous
-              </button>
-              <button type="submit">Register</button>
-            </div>
-          )}
-        </form>
-      </div>
-    );
+    const [stage, setStage] = useState(1);
+    const [personalInfo, setPersonalInfo] = useState({
+    name: '',
+    nationality: '',
+    id: '',
+    email: '',
+    phone: '',
+  });
+  const [accountInfo, setAccountInfo] = useState({
+    username: '',
+    password: '',
+    confirmPassword: '',
+    accountNumber: '',
+    creditNumber: '',
+  });
+
+  const handlePersonalInfoChange = (e) => {
+    const { name, value } = e.target;
+    setPersonalInfo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
+
+  const handleAccountInfoChange = (e) => {
+    const { name, value } = e.target;
+    setAccountInfo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleNextStage = () => {
+    setStage((prevStage) => prevStage + 1);
+  };
+
+  const handlePreviousStage = () => {
+    setStage((prevStage) => prevStage - 1);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div className="registration-page">
+      <header className="registration-header">
+        <nav className="registration-navigation">
+          <div className="registration-logo">
+            <img src={logo} alt="Godfather Bank Logo" />
+            <h1>Godfather Banks</h1>
+            </div>
+            <Link to ='/'><button className="register-home-button">Home</button></Link>
+        </nav>
+      </header>
+      <main className="registration-content">
+        <div className="registration-form">
+          {stage === 1 && (
+            <div className="registration-stage">
+              <h2>Personal Information</h2>
+              <form onSubmit={handleNextStage}>
+                <label htmlFor="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={personalInfo.name}
+                  onChange={handlePersonalInfoChange}
+                  required
+                />
+
+                <label htmlFor="nationality">Nationality</label>
+                <input
+                  type="text"
+                  id="nationality"
+                  name="nationality"
+                  value={personalInfo.nationality}
+                  onChange={handlePersonalInfoChange}
+                  required
+                />
+
+                <label htmlFor="id">National/Passport ID</label>
+                <input
+                  type="text"
+                  id="id"
+                  name="id"
+                  value={personalInfo.id}
+                  onChange={handlePersonalInfoChange}
+                  required
+                />
+
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={personalInfo.email}
+                  onChange={handlePersonalInfoChange}
+                  required
+                />
+
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={personalInfo.phone}
+                  onChange={handlePersonalInfoChange}
+                  required
+                />
+
+                <div className="registration-navigation-buttons">
+                <li class="no-account-link"><a href="/register">No Bank Account? Create Now</a></li>
+                  <button type="submit" className="next-button">
+                    Next
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+
+          {stage === 2 && (
+            <div className="registration-stage">
+              <h2>Account Information</h2>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={accountInfo.username}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={accountInfo.password}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <label htmlFor="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirmPassword"
+                  value={accountInfo.confirmPassword}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <label htmlFor="account-number">Bank Account Number</label>
+                <input
+                  type="text"
+                  id="account-number"
+                  name="accountNumber"
+                  value={accountInfo.accountNumber}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <label htmlFor="credit-number">Credit Card Number</label>
+                <input
+                  type="text"
+                  id="credit-number"
+                  name="creditNumber"
+                  value={accountInfo.creditNumber}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <div className="registration-navigation-buttons">
+                <li class="no-account-link"><a href="/register">No Bank Account? Create Now</a></li>
+                  <button type="button" className="previous-button" onClick={handlePreviousStage}>
+                    Previous
+                  </button>
+                  <button type="submit" className="register-button">
+                    Register
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+          
+
+          <div className="registration-progress">
+            <div className={`progress-bar stage-${stage}`}></div>
+            <div className="progress-steps">
+              <div className={`progress-step ${stage == 1 ? 'active' : ''}`}>
+                <span>1</span>
+                <p>Personal Info</p>
+              </div>
+              <div className={`progress-step ${stage == 2 ? 'active' : ''}`}>
+                <span>2</span>
+                <p>Account Info</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer className="registration-footer">
+        <p>&copy; 2023 Godfather Bank. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
 
 export default Register;
