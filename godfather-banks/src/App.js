@@ -1,6 +1,7 @@
 
 import Home from './Home';
 import Login from  './Login';
+import Admintest from './Admintest';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
  
@@ -15,6 +16,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/admin">
+              <Admintest />
             </Route>
           </Switch>
        </div>
