@@ -22,7 +22,7 @@ function Login  ()  {
           <img src={logo} alt="Godfather Bank Logo" />
           <h1>Godfather Banks</h1>
           </div>
-          <Link to ='/'><button className="home-button">Home</button></Link>
+          <Link to ='/'><button className="login-home-button">Home</button></Link>
         </nav>
       </header>
       <main className="login-content">

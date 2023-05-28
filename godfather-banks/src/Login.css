@@ -23,6 +23,22 @@ body {
     margin: 0;
   }
   
+  .login-home-button {
+    background-color: #FFFFFF;
+    color: #303F9F;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-home-button:hover {
+    background-color: #3070ac;
+    color: #ffffff;
+  }
+  
   /* Content Styles */
   .login-content {
     display: flex;
@@ -113,20 +129,4 @@ body {
   
   a:hover {
     text-decoration: underline;
-  }
-  
-  .home-button {
-    background-color: #FFFFFF;
-    color: #303F9F;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    margin-left: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .home-button:hover {
-    background-color: #3070ac;
-    color: #ffffff;
   }
