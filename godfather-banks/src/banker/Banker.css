@@ -47,7 +47,7 @@ body {
   }
   
   .RequestList {
-    background-color: #C5CAE9;
+    background-color: #ffffff;
     padding: 10px;
     width: 400px;
     box-sizing: border-box;
@@ -61,8 +61,10 @@ body {
   .Notifications {
     padding: 10px;
     color:#4e535e;
+    background-color: #C5CAE9;
+    border-radius: 4px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #979ab1;
+    border-bottom: 1px solid #c2c4d8;
     box-sizing: border-box;
     flex-shrink: 0;
     white-space: nowrap;
@@ -82,6 +84,7 @@ body {
   .Notifications.read {
   font-weight: normal;
   color: #888;
+  background-color: #ffffff;
   }
   
   .RemainingRectangle {
@@ -93,17 +96,21 @@ body {
     border-radius: 4px;
   }
 
+  .SelectedNotif,
+  .SelectedRequest{
+    margin: 5px;
+  }
+
   .SelectedRequest h2,
   .SelectedNotif h2{
     text-align: left;
-    margin-left: 5px;
+    background-color: #C5CAE9;
   }
 
   .SelectedRequest p1,
   .SelectedNotif p1{
     font-size: 14px;
     text-align: left;
-    margin-left: 5px;
   }
 
   .RemainingRectangle h6{
@@ -154,6 +161,36 @@ body {
   
   .info-tab button {
     margin-top: 10px;
+  }
+
+  .info-tab2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+
+  .info-tab2 h3 {
+    margin-top: 0;
+  }
+
+  .info-tab2 button {
+    margin-top: 10px;
+  }
+
+  .UserInfoButton{
+    border-radius: 4px;
+    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
   }
 
   .RejectButton {
