@@ -60,9 +60,6 @@ function Login  ()  {
           </form>
         </div>
       </main>
-      <footer className="login-footer">
-        <p>&copy; 2023 Godfather Banks. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

@@ -292,8 +292,8 @@
   }
   .testing {
     position: absolute;
-    top: 70px;
-    left: 420px;
+    top: 0%;
+    left: 2%;
     padding: 10px;
     font-family: Arial, sans-serif;
   }
@@ -321,4 +321,55 @@
   
   /* Add more CSS styles for other class names */
 
+  .button-groupali {
+    display: flex;
+    justify-content: center; /* Move buttons to the right */
+  }
+  
+  .button-groupali button {
+    margin-left: 50px; /* Add margin-left for spacing between buttons */
+  }
+  
+  .AnnouncementTextarea{
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'Heebo' sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    width: 90%;
+    height: 40%;
+    /* Positioning properties */
+    position: absolute; /* or use 'relative' depending on your layout */
+    top: 30%; /* adjust the value to move the textarea vertically */
+    left: 50%; /* adjust the value to move the textarea horizontally */
+    transform: translate(-50%, -50%); /* centers the textarea */
+    resize: none;
 
+  }
+
+  .AnnouncementButton{
+
+     /* Positioning properties */
+     position: absolute; /* or use 'relative' depending on your layout */
+     top: 75%; /* adjust the value to move the textarea vertically */
+     left: 90%; /* adjust the value to move the textarea horizontally */
+     transform: translate(-50%, -50%); /* centers the textarea */
+     resize: none;
+  }
+  .AnnouncementButton:hover{
+    cursor: pointer;
+  }
+  .AnnouncementSentMessage{
+    margin-top: 10px;
+    position: absolute; /* or use 'relative' depending on your layout */
+    top: 60%; /* adjust the value to move the textarea vertically */
+    left: 50%; /* adjust the value to move the textarea horizontally */
+    transform: translate(-50%, -50%); /* centers the textarea */
+    resize: none;
+    color: rgb(15, 13, 156);
+    font-family: Georgia, serif;
+  }

@@ -212,9 +212,6 @@ const RegisterBankAccount = () => {
           </div>
         </div>
       </main>
-      <footer className="registrationbank-footer">
-        <p>&copy; 2023 Godfather Bank. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

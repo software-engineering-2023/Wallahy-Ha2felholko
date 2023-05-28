@@ -47,6 +47,10 @@ function Banker() {
 
   const handleInfoClose = () => {
     setInfoVisible(false);
+  }
+
+  const handleInfoClose2 = () => {
+    setInfoVisible(false);
     if (selectedRequest) {
       setRequests((prevRequests) => {
         const updatedRequests = [...prevRequests];
@@ -105,7 +109,7 @@ function Banker() {
 
     return (
       <div className="Banker">
-         <header className="header">
+         <header className="header-banker">
           <nav className="navigation">
            <div className="logo">
             <img src={logo} alt="Godfather Bank Logo" />
@@ -119,7 +123,7 @@ function Banker() {
               </ul>
             </div>
             <div className="user-area">
-              <button className="logout-button">Logout</button>
+              <button className="logout-button-banker">Logout</button>
             </div>
           </nav>
         </header>
@@ -144,7 +148,7 @@ function Banker() {
               requests.map((requests, index) => (
                 <a
                   key={index}
-                  className={`Requests ${readRequests.includes(requests) ? 'read' : ''}`}
+                  className={`Requests ${selectedRequest === requests ? "selected" : ""} ${readRequests.includes(requests) ? 'read' : ''}`}
                   onClick={() => handleClick(requests)}
                 >
                   {requests}
@@ -154,7 +158,7 @@ function Banker() {
               notifications.map((notifications, index) => (
                 <a
                   key={index}
-                  className={`Notifications ${readNotifications.includes(notifications) ? 'read' : ''}`}
+                  className={`Notifications ${selectedNotif === notifications ? "selected" : ""} ${readNotifications.includes(notifications) ? 'read' : ''}`}
                   onClick={() => handleClick2(notifications)}
                 >
                   {notifications}
@@ -162,7 +166,6 @@ function Banker() {
             )))
               }
             </div>
-            
           </div>
         <div className="RemainingRectangle">
         {selectedButton === 'button1' ?
@@ -192,7 +195,7 @@ function Banker() {
             <button className="CancelButton" onClick={handleInfoClose}>
               Cancel
             </button>
-            <button className="RejectConfirmButton" onClick={handleInfoClose}>
+            <button className="RejectConfirmButton" onClick={handleInfoClose2}>
               Reject
             </button>
           </div>
@@ -214,15 +217,6 @@ function Banker() {
             )}
         </div>
       </div>
-        <footer className="footer">
-          <div className="footer-content">
-            <p>&copy; 2023 Godfather Banks. All rights reserved.</p>
-            <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-            </ul>
-          </div>
-        </footer>
       </div>
     );
 }

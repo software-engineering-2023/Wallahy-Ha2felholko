@@ -7,11 +7,14 @@ import Register from './Register';
 import RegisterBank from './RegisterBankAccount';
 import ConfirmationBank from './ConfirmationBank';
 import Confirmation from './Confirmation';
+import Client from './Client';
+import Footer from './Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
  
 function App() {
   return (
+    <>
     <Router>
     <div className="App">
        <div className="content">
@@ -40,10 +43,15 @@ function App() {
             <Route exact path="/banker">
               <Banker />
             </Route>
+            <Route exact path="/client">
+              <Client />
+            </Route>
           </Switch>
        </div>
     </div>
     </Router>
+    <Footer/>
+    </>
   );
 }
 
