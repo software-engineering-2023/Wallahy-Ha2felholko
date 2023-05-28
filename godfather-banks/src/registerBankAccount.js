@@ -4,7 +4,7 @@ import { Link,useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 
 
-const RegisterBankAccountAccount = () => {
+const RegisterBankAccount = () => {
     const history = useHistory();
     const [stage, setStage] = useState(1);
     const [personalInfo, setPersonalInfo] = useState({
@@ -219,4 +219,4 @@ const RegisterBankAccountAccount = () => {
   );
 };
 
-export default RegisterBankAccountAccount;
+export default RegisterBankAccount;
