@@ -1,15 +1,40 @@
 import React from 'react';
 import './Admintest.css';
 import logo from './nobg-logo.png';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Admintest() {
   const [selectedButton, setSelectedButton] = useState(null);
   const [selectedRequest, setSelectedRequest] = useState(null);
-  
+  const [announcementText, setAnnouncementText] = useState('');
+const [loading, setLoading] = useState(false);
+const [announcementSent, setAnnouncementSent] = useState(false);
 
+  const handleSendAnnouncement = () => {
+    setSelectedRequest(null);
+  };
 
-  
+const handleAnnouncementChange = (event) => {
+    setAnnouncementText(event.target.value);
+  };
+
+  const handleAnnouncementSubmit = () => {
+    setLoading(true); // Set loading state to true
+
+     // Simulating a 1-second loading delay
+     setTimeout(() => {
+      setLoading(false);
+      setAnnouncementSent(true);
+
+      // Reset the announcement text after sending
+      setAnnouncementText('');
+      
+      setTimeout(() => {
+        setAnnouncementSent(false);
+      }, 4000);
+    }, 1000);
+  };
+ 
   const [requests, setRequests] = useState([
     {
       name: "Stolen Card",
@@ -39,11 +64,11 @@ function Admintest() {
     },
     {
       name: "Hacked Bank Account",
-      description: "My bank account got hacked. Need assistance.",
+      description: " ",
       styleClass: "hacked-bank-account",
       additionalContent: (
         <div className="testing">
-          <h1> Request: Stolen Card
+          <h1> Request: Hacked Banked Account
 
           </h1>
           <h5>
@@ -64,11 +89,11 @@ function Admintest() {
     },
     {
       name: "Damaged Card",
-      description: "Please help with my stolen card issue.",
+      description: " ",
       styleClass: "damaged-card",
       additionalContent: (
         <div className="testing">
-          <h1> Request: Stolen Card
+          <h1> Request: Damaged Card
 
           </h1>
           <h5>
@@ -90,11 +115,11 @@ function Admintest() {
     },
     {
       name: "Technical Issue",
-      description: "Please help with my stolen card issue.",
+      description: " ",
       styleClass: "technical-issue",
       additionalContent: (
         <div className="testing">
-          <h1> Request: Stolen Card
+          <h1> Request: Technical Issue
 
           </h1>
           <h5>
@@ -160,14 +185,19 @@ function Admintest() {
         </header>
         <div className="body">
           <div className="List">
-          <div className="button-group">
+          <div className="button-groupali">
           <button
             className={selectedButton === 'button1' ? 'selected' : ''}
             onClick={() => handleButtonClick('button1')}
           >
             Requests
           </button>
-         
+          <button
+              className={selectedButton === "button2" ? "selected" : ""}
+              onClick={() => handleButtonClick("button2")}
+            >
+              Send Announcement
+            </button>
           </div>
           <div className="RequestList">
             {selectedButton === 'button1' &&
@@ -183,7 +213,7 @@ function Admintest() {
           </div>
         </div>
         <div className="RemainingRectangle">
-      {selectedRequest ? (
+        {selectedButton === 'button1' && selectedRequest ? (
         <div className="SelectedRequest">
           
           <div className={`RequestInfo ${selectedRequest.styleClass}`}>
@@ -193,10 +223,27 @@ function Admintest() {
           <h6>*ADD TIME SENT HERETESTTTTTTTTTT*</h6>
           {selectedRequest.additionalContent}
         </div>
-      ) : (
-        <p>Select from the panel to display</p>
-      )}
-        </div>
+        ) : selectedButton === 'button2' ? (
+          <div className="AnnouncementContainer">
+  <textarea
+    className="AnnouncementTextarea"
+    value={announcementText}
+    onChange={handleAnnouncementChange}
+    placeholder="Enter your announcement here..."
+  />
+  <button className="AnnouncementButton" onClick={handleAnnouncementSubmit}>
+    {loading ? 'Loading...' : 'Submit Announcement'}
+  </button>
+  {announcementSent && (
+     <div className="AnnouncementSentMessage">
+    <p>The announcement has been sent.</p>
+    </div>
+  )}
+</div>
+        ) : (
+          <p>Select from the panel to display</p>
+        )}
+      </div>
       </div>
         <footer className="footer">
           <div className="footer-content">
