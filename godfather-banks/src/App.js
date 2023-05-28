@@ -37,7 +37,7 @@ function App() {
             <Route exact path="/registerBankAccount">
               <RegisterBank />
             </Route>
-            <Route exact path="/Banker">
+            <Route exact path="/banker">
               <Banker />
             </Route>
           </Switch>
