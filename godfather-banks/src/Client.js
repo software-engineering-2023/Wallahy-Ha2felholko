@@ -10,11 +10,11 @@ const Client = () => {
     return (
         <>
             <div className="clientCards">
-                <button>View Transactions</button>
-                <button>View Transactions</button>
-                <button>View Transactions</button>
-                <button>View Transactions</button>
-                <button>View Transactions</button>
+                <button>Credit Cards</button>
+                <button>Loans</button>
+                <button>Transactions</button>
+                <button>Transfers</button>
+                <button>Bills</button>
             </div>
         </>
     );

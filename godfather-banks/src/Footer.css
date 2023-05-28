@@ -25,6 +25,10 @@
     display: inline-block;
     margin-left: 20px;
   }
+
+  .home-footer ul li:hover{
+    text-decoration: underline;
+  }
   
   .home-footer ul li a {
     color: #FFFFFF;

@@ -1,0 +1,10 @@
+.clientCards{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 300px 100px;
+}
+
+.clientCards button{
+    flex:1;
+}
