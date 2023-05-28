@@ -8,6 +8,7 @@ import RegisterBank from './RegisterBankAccount';
 import ConfirmationBank from './ConfirmationBank';
 import Confirmation from './Confirmation';
 import Client from './Client';
+import Header from './Header';
 import Footer from './Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -32,6 +33,7 @@ function App() {
               <ConfirmationBank />
             </Route>
             <Route exact path="/admin">
+              <Header/>
               <Admintest />
             </Route>
             <Route exact path="/register">
@@ -41,9 +43,11 @@ function App() {
               <RegisterBank />
             </Route>
             <Route exact path="/banker">
+              <Header/>
               <Banker />
             </Route>
             <Route exact path="/client">
+              <Header/>
               <Client />
             </Route>
           </Switch>
