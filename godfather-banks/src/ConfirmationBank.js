@@ -21,7 +21,7 @@ const Confirmation = () => {
         <div className="confirmation-message">
           <img src={greenCheck} alt="Green Check" />
           <h2>You have been registered successfully!</h2>
-          <p>You have rserved a slot successfully. Please come to the nearest branch to fill the extra information.Thank you for choosing Godfather Banks</p>
+          <p>You have reserved a slot successfully. Please come to the nearest branch to fill the extra information. Thank you for choosing Godfather Banks</p>
         </div>
       </main>
 
