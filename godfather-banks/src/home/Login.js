@@ -25,7 +25,7 @@ function Login  ()  {
       history.push('/client');
     }
     else{
-      setErrorMessage('Username is incorrect');
+      setErrorMessage('Incorrect username');
     }
   
   };
