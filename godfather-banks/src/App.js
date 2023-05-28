@@ -1,6 +1,6 @@
 
 import Home from './Home';
-import Banker from './Banker';
+import Banker from './banker/Banker';
 import Login from  './Login';
 import Admintest from './Admintest';
 import Register from './Register';
