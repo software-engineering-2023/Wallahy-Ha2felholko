@@ -250,8 +250,9 @@
     background:hsl(216, 81%, 60%);
     color: hsl(190deg, 10%, 95%);
     position: absolute;  /* Set the button to absolute positioning */
-    top: 120%;           /* Adjust the top position value */
-    left: 18%;          /* Adjust the left position value */
+    top: 75%;           /* Adjust the top position value */
+    left: 82%;          /* Adjust the left position value */
+    transform: scale(1);
     transform: translate(-50%, -50%);  /* Center the button using translate */
     
     box-shadow: 0 0px 0px hsla(194, 82%, 37%, 0.575);
@@ -260,6 +261,7 @@
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    border: none;
     
     --dur: .15s;
     --delay: .15s;
@@ -372,4 +374,22 @@
     resize: none;
     color: rgb(15, 13, 156);
     font-family: Georgia, serif;
+  }
+
+  .proceed-button {
+    position: absolute;
+    top: 180%;
+    left: 120%;
+    transform: scale(1.5);
+  }
+  
+  .ButtonContainer {
+    /* Styles for the container of the Proceed button */
+    /* ... */
+  }
+
+  .RequestList a.selected {
+    /* Styles for the selected (highlighted) request */
+    background-color: #303F9F;
+    color: #000000;
   }

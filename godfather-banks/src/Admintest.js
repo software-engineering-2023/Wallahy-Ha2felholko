@@ -54,9 +54,14 @@ const handleAnnouncementChange = (event) => {
           
 
           <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
-          <div className='button1'>
-          <button className="button-arounder" onClick={() => handleRequestHandled("Stolen Card")}>Proceed</button> 
-        </div>
+          <div className="ButtonContainer">
+        <button
+          className="button-arounder proceed-button"
+          onClick={() => handleRequestHandled("Stolen Card")}
+        >
+          Proceed
+        </button>
+      </div>
           
         </div>
       ),
@@ -81,7 +86,12 @@ const handleAnnouncementChange = (event) => {
 
           <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
           <div className='button1'>
-          <button className="button-arounder" onClick={() => handleRequestHandled("Hacked Bank Account")}>Proceed</button> 
+          <button
+          className="button-arounder proceed-button"
+          onClick={() => handleRequestHandled("Hacked Bank Account")}
+        >
+          Proceed
+        </button> 
         </div>
           
         </div>
@@ -106,7 +116,12 @@ const handleAnnouncementChange = (event) => {
 
           <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
           <div className='button1'>
-          <button className="button-arounder" onClick={() => handleRequestHandled("Damaged Card")}>Proceed</button> 
+          <button
+          className="button-arounder proceed-button"
+          onClick={() => handleRequestHandled("Damaged Card")}
+        >
+          Proceed
+        </button> 
         </div>
           
         </div>
@@ -132,7 +147,12 @@ const handleAnnouncementChange = (event) => {
 
           <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
           <div className='button1'>
-          <button className="button-arounder" onClick={() => handleRequestHandled("Technical Issue")}>Proceed</button> 
+          <button
+          className="button-arounder proceed-button"
+          onClick={() => handleRequestHandled("Technical Issue")}
+        >
+          Proceed
+        </button> 
         </div>
           
         </div>
@@ -165,24 +185,7 @@ const handleAnnouncementChange = (event) => {
 
     return (
       <div className="Admintest">
-         <header className="header">
-          <nav className="navigation">
-           <div className="logo">
-            <img src={logo} alt="Godfather Bank Logo" />
-            <h1>Godfather Banks</h1>
-            </div>
-            <div className="control">
-              <ul>
-                <li><a href="/services">Services</a></li>
-              <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="user-area">
-              <button className="logout-button">Logout</button>
-            </div>
-          </nav>
-        </header>
+        
         <div className="body">
           <div className="List">
           <div className="button-groupali">
@@ -204,7 +207,7 @@ const handleAnnouncementChange = (event) => {
               requests.map((request, index) => (
                 <a
                   key={index}
-                  className="Requests"
+                  className={`Requests ${selectedRequest === request ? 'selected' : ''}`}
                   onClick={() => handleClick(request.name)}
                 >
                   {request.name}
@@ -219,21 +222,24 @@ const handleAnnouncementChange = (event) => {
           <div className={`RequestInfo ${selectedRequest.styleClass}`}>
             {selectedRequest.description}
           </div>
-          
-          <h6>*ADD TIME SENT HERETESTTTTTTTTTT*</h6>
+          >
           {selectedRequest.additionalContent}
         </div>
         ) : selectedButton === 'button2' ? (
           <div className="AnnouncementContainer">
-  <textarea
-    className="AnnouncementTextarea"
-    value={announcementText}
-    onChange={handleAnnouncementChange}
-    placeholder="Enter your announcement here..."
-  />
-  <button className="AnnouncementButton" onClick={handleAnnouncementSubmit}>
-    {loading ? 'Loading...' : 'Submit Announcement'}
-  </button>
+        <textarea
+        className="AnnouncementTextarea"
+        value={announcementText}
+        onChange={handleAnnouncementChange}
+       placeholder="Enter your announcement here..."
+      />
+       <button
+          className={`button-arounder ${loading ? 'loading' : ''}`}
+          onClick={handleAnnouncementSubmit}
+          disabled={loading}
+        >
+          {loading ? 'Loading...' : 'Submit Announcement'}
+        </button>
   {announcementSent && (
      <div className="AnnouncementSentMessage">
     <p>The announcement has been sent.</p>
