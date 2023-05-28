@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './nobg-logo.png';
-import greenCheck from './greenCheck.png';
+import logo from '../img/nobg-logo.png';
+import greenCheck from '../img/greenCheck.png';
 import './Confirmation.css';
 import { Link } from 'react-router-dom';
 

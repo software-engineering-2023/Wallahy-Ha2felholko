@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Home from './Home';
 import Banker from './banker/Banker';
 import Login from  './Login';
@@ -7,6 +8,16 @@ import Register from './Register';
 import RegisterBank from './RegisterBankAccount';
 import ConfirmationBank from './ConfirmationBank';
 import Confirmation from './Confirmation';
+=======
+import Home from './home/Home';
+import Banker from './banker/Banker';
+import Login from  './home/Login';
+import Admintest from './admin/Admintest';
+import Register from './home/Register';
+import RegisterBank from './home/RegisterBankAccount';
+import ConfirmationBank from './home/ConfirmationBank';
+import Confirmation from './home/Confirmation';
+>>>>>>> 5344ae0185c9bb7c51b20378f89e8730f38b9471
 import Client from './client/Client';
 import Header from './fixed/Header';
 import Footer from './fixed/Footer';

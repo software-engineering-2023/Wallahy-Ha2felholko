@@ -1,6 +1,7 @@
 import './Header.css';
-import logo from '../nobg-logo.png';
+import logo from '../img//nobg-logo.png';
 import {Link} from 'react-router-dom';
+import NotificationDropdown from './NotificationDropdown';
 
 function Header() {
     return (
@@ -11,6 +12,7 @@ function Header() {
           <h1>Godfather Banks</h1>
           </div>
           <div className="home-user-area">
+            <NotificationDropdown/>
             <Link to ='/login'><button className="home-login-button">Logout</button></Link>
           </div>
         </nav>

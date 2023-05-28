@@ -1,5 +1,5 @@
 import './Home.css';
-import logo from './nobg-logo.png';
+import logo from '../img/nobg-logo.png';
 
 import {Link} from 'react-router-dom';
 

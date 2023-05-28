@@ -1,6 +1,5 @@
 import React from 'react';
 import './Admintest.css';
-import logo from './nobg-logo.png';
 import { useState } from 'react';
 
 function Admintest() {
@@ -37,12 +36,12 @@ const handleAnnouncementChange = (event) => {
  
   const [requests, setRequests] = useState([
     {
-      name: "Stolen Card",
+      name: "Card Theft",
       description: " ",
       styleClass: "stolen-card",
       additionalContent: (
         <div className="testing">
-          <h1> Request: Stolen Card
+          <h1> Request: Card Theft
 
           </h1>
           <h5>
@@ -53,11 +52,13 @@ const handleAnnouncementChange = (event) => {
           <h5> Date: </h5>
           
 
-          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <p>By clicking proceed, the following request will be handled appropriately, make sure to review all the information above</p>
+          
+          
           <div className="ButtonContainer">
         <button
           className="button-arounder proceed-button"
-          onClick={() => handleRequestHandled("Stolen Card")}
+          onClick={() => handleRequestHandled("Card Theft")}
         >
           Proceed
         </button>
@@ -84,7 +85,7 @@ const handleAnnouncementChange = (event) => {
           <h5> Date: </h5>
           
 
-          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <p>By clicking proceed, the following request will be handled appropriately, make sure to review all the information above</p>
           <div className='button1'>
           <button
           className="button-arounder proceed-button"
@@ -114,7 +115,7 @@ const handleAnnouncementChange = (event) => {
           <h5> Date: </h5>
           
 
-          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <p>By clicking proceed, the following request will be handled appropriately, make sure to review all the information above</p>
           <div className='button1'>
           <button
           className="button-arounder proceed-button"
@@ -145,7 +146,7 @@ const handleAnnouncementChange = (event) => {
           <h5> Date: </h5>
           
 
-          <p>Clicking the proceed button once you verified all the info so the request is handeled</p>
+          <p>By clicking proceed, the following request will be handled appropriately, make sure to review all the information above</p>
           <div className='button1'>
           <button
           className="button-arounder proceed-button"
@@ -158,6 +159,38 @@ const handleAnnouncementChange = (event) => {
         </div>
       ),
     },
+    {
+      name: "Stolen Card",
+      description: " ",
+      styleClass: "stolen-card",
+      additionalContent: (
+        <div className="testing">
+          <h1> Request: Stolen Card
+
+          </h1>
+          <h5>
+              Account ID:
+            
+          </h5>
+          <h5> Account Name:</h5>
+          <h5> Date: </h5>
+          
+
+          <p>By clicking proceed, the following request will be handled appropriately, make sure to review all the information above</p>
+          
+          <div className="ButtonContainer">
+        <button
+          className="button-arounder proceed-button"
+          onClick={() => handleRequestHandled("Stolen Card")}
+        >
+          Proceed
+        </button>
+      </div>
+          
+        </div>
+      ),
+      
+    }
     // Add more request objects with different details
   ]);
 
@@ -174,8 +207,7 @@ const handleAnnouncementChange = (event) => {
   };
 
   const handleRequestHandled = (requestName) => {
-    const updatedRequests = requests.filter((request) => request.name !== requestName);
-    setRequests(updatedRequests);
+    setRequests(prevRequests => prevRequests.filter(request => request.name !== requestName));
     setSelectedRequest(null);
   };
   
@@ -222,7 +254,7 @@ const handleAnnouncementChange = (event) => {
           <div className={`RequestInfo ${selectedRequest.styleClass}`}>
             {selectedRequest.description}
           </div>
-          >
+          
           {selectedRequest.additionalContent}
         </div>
         ) : selectedButton === 'button2' ? (

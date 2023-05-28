@@ -1,96 +1,4 @@
-/* Header Styles */
-.header {
-    background-color: #303F9F;
-    padding: 10px;
-  }
-  
-  .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #FFFFFF;
-  }
-  
-  .logo h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .navigation ul {
-    padding-inline-start: 0px;
-    list-style: none;
-    display: flex;
-  }
-  
-  .navigation li {
-    text-align: center;
-    margin-right: 20px;
-  }
-  
-  .navigation a {
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  
-  .user-area {
-    display: flex;
-    align-items: center;
-  }
-  
-  .login-button,
-  .register-button {
-    background-color: #FFFFFF;
-    color: #303F9F;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    margin-left: 10px;
-    font-weight: bold;
-    cursor: pointer;
-  }
 
-   /* Footer Styles */
-   .footer {
-    position: absolute;
-    left:0;
-    bottom:0;
-    right:0;
-    background-color: #303F9F;
-    color: #FFFFFF;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  .footer ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 40px; /* Adjust the height as per your logo size */
-    margin-right: 10px;
-  }
    /* Content Styles */
    .hero-section {
     background-color: #3F51B5;
@@ -251,9 +159,10 @@
     color: hsl(190deg, 10%, 95%);
     position: absolute;  /* Set the button to absolute positioning */
     top: 75%;           /* Adjust the top position value */
-    left: 82%;          /* Adjust the left position value */
+    left: 80%;          /* Adjust the left position value */
     transform: scale(1);
     transform: translate(-50%, -50%);  /* Center the button using translate */
+    
     
     box-shadow: 0 0px 0px hsla(194, 82%, 37%, 0.575);
     transfrom:translateY(0);
@@ -357,10 +266,11 @@
 
      /* Positioning properties */
      position: absolute; /* or use 'relative' depending on your layout */
-     top: 75%; /* adjust the value to move the textarea vertically */
-     left: 90%; /* adjust the value to move the textarea horizontally */
+     top: 80%; /* adjust the value to move the textarea vertically */
+     left: 80%; /* adjust the value to move the textarea horizontally */
      transform: translate(-50%, -50%); /* centers the textarea */
      resize: none;
+     transform: scale(1.4);
   }
   .AnnouncementButton:hover{
     cursor: pointer;
@@ -378,14 +288,19 @@
 
   .proceed-button {
     position: absolute;
-    top: 180%;
-    left: 120%;
+    top: 170%;
+    left: 90%;
     transform: scale(1.5);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
   }
   
   .ButtonContainer {
-    /* Styles for the container of the Proceed button */
-    /* ... */
+    
+  
   }
 
   .RequestList a.selected {
@@ -393,3 +308,5 @@
     background-color: #303F9F;
     color: #000000;
   }
+
+ 
