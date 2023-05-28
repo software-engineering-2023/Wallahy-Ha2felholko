@@ -109,24 +109,6 @@ function Banker() {
 
     return (
       <div className="Banker">
-         <header className="header-banker">
-          <nav className="navigation">
-           <div className="logo">
-            <img src={logo} alt="Godfather Bank Logo" />
-            <h1>Godfather Banks</h1>
-            </div>
-            <div className="control">
-              <ul>
-                <li><a href="/services">Services</a></li>
-              <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="user-area">
-              <button className="logout-button-banker">Logout</button>
-            </div>
-          </nav>
-        </header>
         <div className="body">
           <div className="List">
           <div className="button-group">
