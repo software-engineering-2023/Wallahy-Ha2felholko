@@ -1,7 +1,30 @@
+.clientTitle {
+    font-family: "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+
+  .clientBalance{
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .clientBalanceLabel{
+    margin-top: 0px;
+    margin-left: 5px;
+    color: #757575;
+  }
+  
+
 .clientCards{
     display:flex;
     align-items: center;
-    margin: 160px 100px;
+    margin: 40px 100px;
     flex-wrap: wrap;
     justify-content: center;
     gap:10px;
@@ -19,11 +42,11 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    border-color: #757575;
     border-radius: 10px;
-    border: 1px solid #03a9f4;
-    color: #fff;
-    background-color: #03a9f4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.5, 0.5);
     transition: background-color 0.3s ease;
 
 }
@@ -36,4 +59,14 @@
 .clientCards button img{
     height:100px;
     width:100px;
+}
+
+.report-container{
+    position:relative;
+}
+
+.reportButton{
+    position:absolute;
+    top: 40px;
+    left: 1310px;
 }

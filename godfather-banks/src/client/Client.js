@@ -9,12 +9,17 @@ import billsIcon from '../img/bills-icon.png';
 import {Link} from 'react-router-dom';
 import Footer from '../fixed/Footer.js';
 import Header from '../fixed/Header.js';
+import NotificationDropdown from '../fixed/NotificationDropdown';
+import IssueReport from './IssueReport';
 
 const Client = () => {
     
   
     return (
         <>
+            <h1 className="clientTitle">Welcome Back, Mohamed !</h1>
+            <h1 className="clientBalance">EGP 52,550</h1>
+            <p className="clientBalanceLabel"> Account Balance</p>
             <div className="clientCards">
                 <button><img src={creditCardIcon}/><br/>Credit Cards</button>
                 <button><img src={loansIcon}/><br/>Loans</button>
@@ -22,6 +27,10 @@ const Client = () => {
                 <button><img src={transfersIcon}/><br/>Transfers</button>
                 <button><img src={billsIcon}/><br/>Bills</button>
             </div>
+            <div className="report-container">  
+                <div className='reportButton'><IssueReport/></div>
+            </div>
+            
         </>
     );
   };
