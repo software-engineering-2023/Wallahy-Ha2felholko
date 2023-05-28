@@ -1,5 +1,4 @@
 import './Banker.css';
-import logo from './nobg-logo.png';
 import React, { useState } from 'react';
 
 function Banker() {

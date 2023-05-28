@@ -1,6 +1,5 @@
 import React from 'react';
 import './Admintest.css';
-import logo from './nobg-logo.png';
 import { useState } from 'react';
 
 function Admintest() {

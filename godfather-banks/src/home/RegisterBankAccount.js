@@ -1,25 +1,25 @@
-import './Register.css';
-import logo from './nobg-logo.png';
+import './RegisterBankAccount.css';
+import logo from '../img/nobg-logo.png';
 import { Link,useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 
 
-const Register = () => {
+const RegisterBankAccount = () => {
     const history = useHistory();
     const [stage, setStage] = useState(1);
     const [personalInfo, setPersonalInfo] = useState({
     name: '',
     nationality: '',
-    id: '',
+    dob: '',
     email: '',
     phone: '',
   });
   const [accountInfo, setAccountInfo] = useState({
-    username: '',
-    password: '',
-    confirmPassword: '',
-    accountNumber: '',
-    creditNumber: '',
+    gender: '',
+    id: '',
+    employment: '',
+    sourceoffunds: '',
+    toa: '',
   });
 
   const handlePersonalInfoChange = (e) => {
@@ -48,27 +48,27 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push('/confirmation');
+    history.push('/confirmationBank');
   };
 
   return (
-    <div className="registration-page">
-      <header className="registration-header">
-        <nav className="registration-navigation">
-          <div className="registration-logo">
+    <div className="registrationbank-page">
+      <header className="registrationbank-header">
+        <nav className="registrationbank-navigation">
+          <div className="registrationbank-logo">
             <img src={logo} alt="Godfather Bank Logo" />
             <h1>Godfather Banks</h1>
             </div>
-            <div className="registration-creatingaccount">
-            <h2>Registering for an account</h2>
+            <div className="registrationbank-creatingaccount">
+            <h2>Registering for Banking account</h2>
             </div>
-            <Link to ='/'><button className="register-home-button">Home</button></Link>
+            <Link to ='/'><button className="registerbank-home-button">Home</button></Link>
         </nav>
       </header>
-      <main className="registration-content">
-        <div className="registration-form">
+      <main className="registrationbank-content">
+        <div className="registrationbank-form">
           {stage === 1 && (
-            <div className="registration-stage">
+            <div className="registrationbank-stage">
               <h2>Personal Information</h2>
               <form onSubmit={handleNextStage}>
                 <label htmlFor="name">Full Name</label>
@@ -91,12 +91,12 @@ const Register = () => {
                   required
                 />
 
-                <label htmlFor="id">National/Passport ID</label>
+                <label htmlFor="dob">Date of birth</label>
                 <input
                   type="text"
-                  id="id"
-                  name="id"
-                  value={personalInfo.id}
+                  id="dob"
+                  name="dob"
+                  value={personalInfo.dob}
                   onChange={handlePersonalInfoChange}
                   required
                 />
@@ -121,8 +121,7 @@ const Register = () => {
                   required
                 />
 
-                <div className="registration-navigation-buttons">
-                <li class="no-account-link"><a href="/registerBankAccount">No Bank Account? Create Now</a></li>
+                <div className="registrationbank-navigation-buttons">
                   <button type="submit" className="next-button">
                     Next
                   </button>
@@ -132,61 +131,60 @@ const Register = () => {
           )}
 
           {stage === 2 && (
-            <div className="registration-stage">
-              <h2>Account Information</h2>
+            <div className="registrationbank-stage">
+              <h2>Personal Information</h2>
               <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username</label>
+                <label htmlFor="gender">Gender</label>
                 <input
                   type="text"
-                  id="username"
-                  name="username"
-                  value={accountInfo.username}
+                  id="gender"
+                  name="gender"
+                  value={accountInfo.gender}
                   onChange={handleAccountInfoChange}
                   required
                 />
 
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={accountInfo.password}
-                  onChange={handleAccountInfoChange}
-                  required
-                />
-
-                <label htmlFor="confirm-password">Confirm Password</label>
-                <input
-                  type="password"
-                  id="confirm-password"
-                  name="confirmPassword"
-                  value={accountInfo.confirmPassword}
-                  onChange={handleAccountInfoChange}
-                  required
-                />
-
-                <label htmlFor="account-number">Bank Account Number</label>
+                <label htmlFor="id">National/Passport ID</label>
                 <input
                   type="text"
-                  id="account-number"
-                  name="accountNumber"
-                  value={accountInfo.accountNumber}
+                  id="id"
+                  name="id"
+                  value={accountInfo.id}
                   onChange={handleAccountInfoChange}
                   required
                 />
 
-                <label htmlFor="credit-number">Credit Card Number</label>
+                <label htmlFor="employment">Employment status</label>
                 <input
                   type="text"
-                  id="credit-number"
-                  name="creditNumber"
-                  value={accountInfo.creditNumber}
+                  id="employment"
+                  name="employment"
+                  value={accountInfo.employment}
                   onChange={handleAccountInfoChange}
                   required
                 />
 
-                <div className="registration-navigation-buttons">
-                <li class="no-account-link"><a href="/registerBankAccount">No Bank Account? Create Now</a></li>
+                <label htmlFor="sourceoffunds">Source of funds</label>
+                <input
+                  type="text"
+                  id="sourceoffunds"
+                  name="sourceoffunds"
+                  value={accountInfo.sourceoffunds}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <label htmlFor="toa">Type of account</label>
+                <input
+                  type="text"
+                  id="toa"
+                  name="toa"
+                  value={accountInfo.toa}
+                  onChange={handleAccountInfoChange}
+                  required
+                />
+
+                <div className="registrationbank-navigation-buttons">
                   <button type="button" className="previous-button" onClick={handlePreviousStage}>
                     Previous
                   </button>
@@ -199,7 +197,7 @@ const Register = () => {
           )}
           
 
-          <div className="registration-progress">
+          <div className="registrationbank-progress">
             <div className={`progress-bar stage-${stage}`}></div>
             <div className="progress-steps">
               <div className={`progress-step ${stage == 1 ? 'active' : ''}`}>
@@ -218,4 +216,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterBankAccount;
