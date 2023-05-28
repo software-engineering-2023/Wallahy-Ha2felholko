@@ -20,6 +20,7 @@ const Client = () => {
             <h1 className="clientTitle">Welcome Back, Mohamed !</h1>
             <h1 className="clientBalance">EGP 52,550</h1>
             <p className="clientBalanceLabel"> Account Balance</p>
+            <hr className="balanceLine"/>
             <div className="clientCards">
                 <button><img src={creditCardIcon}/><br/>Credit Cards</button>
                 <button><img src={loansIcon}/><br/>Loans</button>

@@ -9,7 +9,7 @@
   }
 
   .clientBalance{
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #333;
   }
@@ -18,6 +18,11 @@
     margin-top: 0px;
     margin-left: 5px;
     color: #757575;
+  }
+
+  .balanceLine{
+    margin-top: 0px;
+    margin-right:  1250px;
   }
   
 
