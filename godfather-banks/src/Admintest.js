@@ -28,7 +28,7 @@ const handleAnnouncementChange = (event) => {
 
       // Reset the announcement text after sending
       setAnnouncementText('');
-      
+
       setTimeout(() => {
         setAnnouncementSent(false);
       }, 4000);
@@ -245,15 +245,7 @@ const handleAnnouncementChange = (event) => {
         )}
       </div>
       </div>
-        <footer className="footer">
-          <div className="footer-content">
-            <p>&copy; 2023 Godfather Banks. All rights reserved.</p>
-            <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-            </ul>
-          </div>
-        </footer>
+        
       </div>
     );
 }
