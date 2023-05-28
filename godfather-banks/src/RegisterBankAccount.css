@@ -1,42 +1,42 @@
-.registration-page {
+.registrationbank-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-  .registration-header {
+  .registrationbank-header {
     background-color: #303F9F;
     padding: 10px 20px;
   }
   
-  .registration-navigation {
+  .registrationbank-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .registration-logo {
+  .registrationbank-logo {
     display: flex;
     align-items: center;
     color: #fff;
   }
   
-  .registration-logo img {
+  .registrationbank-logo img {
     height: 40px; /* Adjust the height as per your logo size */
     margin-right: 10px;
   }
   
-  .registration-logo h1 {
+  .registrationbank-logo h1 {
     font-size: 24px;
     margin-left: 10px;
   }
-  .registration-creatingaccount h2 {
+  .registrationbank-creatingaccount h2 {
     font-size: 24px;
     color: #ffffff;
     margin-right: 150px;
   }
   
-  .register-home-button {
+  .registerbank-home-button {
     background-color: #FFFFFF;
     color: #303F9F;
     border: none;
@@ -47,13 +47,13 @@
     cursor: pointer;
   }
   
-  .register-home-button:hover {
+  .registerbank-home-button:hover {
     background-color: #3070ac;
     color: #ffffff;
   }
   
 
-  .registration-content {
+  .registrationbank-content {
     flex-grow: 1;
     background-color: #f4f4f4;
     padding: 23px;
@@ -61,7 +61,7 @@
     max-height: calc(100vh - 200px); /* Adjust the height to fit within the viewport */
   }
   
-  .registration-form {
+  .registrationbank-form {
     max-width: 500px;
     margin: 0 auto;
     background-color: #fff;
@@ -72,19 +72,19 @@
     
   }
   
-  .registration-stage h2 {
+  .registrationbank-stage h2 {
     font-size: 18px;
     margin-bottom: 20px;
   }
   
-  .registration-form label {
+  .registrationbank-form label {
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
     height:7px;
   }
   
-  .registration-form input {
+  .registrationbank-form input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -93,15 +93,12 @@
     height:5px;
   }
   
-  .registration-navigation-buttons {
+  .registrationbank-navigation-buttons {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
   }
   
-  .registration-navigation-buttons .no-account-link {
-    margin-right: auto; /* Added to align the link to the left */
-  }
   
   .next-button,
   .register-button,
@@ -132,7 +129,7 @@
   
   
   
-  .registration-progress {
+  .registrationbank-progress {
     margin-top: 30px;
   }
   
@@ -177,7 +174,7 @@
     background-color: #002a5d;
   }
   
-  .registration-footer {
+  .registrationbank-footer {
     background-color: #303F9F;
     color: #fff;
     padding: 11px 20px;

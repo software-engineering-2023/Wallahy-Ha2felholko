@@ -51,7 +51,7 @@ function Login  ()  {
               <p className="error-message">{errorMessage}</p>
             )}
 
-            <button className="login-button" type="submit">
+            <button className="login2-button" type="submit">
               Login
             </button>
               
