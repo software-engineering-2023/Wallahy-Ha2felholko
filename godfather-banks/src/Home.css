@@ -16,6 +16,11 @@ body {
     justify-content: space-between;
     color: #FFFFFF;
   }
+
+  .home-navigation ul li:hover{
+    text-decoration: underline;
+  }
+  
   
   .home-logo {
     display: flex;
