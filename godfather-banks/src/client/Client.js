@@ -1,14 +1,14 @@
 import './Client.css';
 
-import creditCardIcon from './credit-card-icon.png';
-import loansIcon from './loans-icon.png';
-import transactionsIcon from './transaction-icon.png';
-import transfersIcon from './transfers-icon.png';
-import billsIcon from './bills-icon.png';
+import creditCardIcon from '../img/credit-card-icon.png';
+import loansIcon from '../img/loans-icon.png';
+import transactionsIcon from '../img/transaction-icon.png';
+import transfersIcon from '../img/transfers-icon.png';
+import billsIcon from '../img/bills-icon.png';
 
 import {Link} from 'react-router-dom';
-import Footer from './Footer.js';
-import Header from './Header.js';
+import Footer from '../fixed/Footer.js';
+import Header from '../fixed/Header.js';
 
 const Client = () => {
     
