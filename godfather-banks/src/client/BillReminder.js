@@ -26,18 +26,18 @@ const BillReminderButton = () => {
   return (
     <div className="bill-reminder-container">
       <div className="bill-prompt">
-          <label htmlFor="billSelect">Select a bill:</label>
+          <label className="reminderLabel" htmlFor="billSelect">Select Bill:</label>
           <select id="billSelect" value={selectedBill} onChange={handleBillChange}>
-            <option value="">-- Select a bill --</option>
+            <option value="">-- Select Bill --</option>
             <option value="electricity">Electricity</option>
             <option value="water">Water</option>
             <option value="internet">Internet</option>
             {/* Add more bill options here */}
           </select>
 
-          <label htmlFor="frequencySelect">Select frequency:</label>
+          <label className="reminderLabel" htmlFor="frequencySelect">Select Frequency:</label>
           <select id="frequencySelect" value={selectedFrequency} onChange={handleFrequencyChange}>
-            <option value="">-- Select a frequency --</option>
+            <option value="">-- Select Frequency --</option>
             <option value="daily">Daily</option>
             <option value="weekly">Weekly</option>
             <option value="monthly">Monthly</option>

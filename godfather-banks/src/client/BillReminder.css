@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 170px;
     margin-right: 20px;
     transform: scale(1.4);
   }
   
+  .reminderLabel{
+    font-size: 20px;
+
+  }
+
   .reminder-button {
     padding: 10px 20px;
     font-size: 30px;
@@ -19,6 +24,9 @@
   }
   
   .bill-prompt {
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2, 0.2);
     display: flex;
     font-size: 30px;
     flex-direction: column;
@@ -26,17 +34,15 @@
     margin-bottom: 20px;
   }
   
-  .bill-prompt label,
-  .bill-prompt select {
-    font:15px;
-    margin-bottom: 10px;
-    size: 50px;
-  }
   
   .bill-prompt button {
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 9px;
+    margin-top:19px;
+    border:none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.5, 0.7);
+    transition: background-color 0.3s ease;
   }
 
   .setReminderButton:hover{
@@ -48,6 +54,10 @@
     margin-top: 10px;
     font-size: 14px;
     color: green;
+  }
+
+  #billSelect{
+    margin-bottom: 9px;
   }
 
   
