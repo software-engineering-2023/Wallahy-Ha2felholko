@@ -1,5 +1,4 @@
 import './Banker.css';
-import logo from './nobg-logo.png';
 import React, { useState } from 'react';
 
 function Banker() {
@@ -9,8 +8,8 @@ function Banker() {
   const [selectedNotif, setSelectedNotif] = useState(null);
   const [readRequests, setReadRequests] = useState([]);
   const [readNotifications, setReadNotifications] = useState([]);
-  const [requests, setRequests] = useState(["Request 1",
-  "Request 2",
+  const [requests, setRequests] = useState(["The user requested a new bank account",
+  "The user requested a new loan application",
   "Request 3",
   "Request 44444444444444444444444444444444444444444444444444 with some extra text to overflow",
   "Request 5",
@@ -109,24 +108,6 @@ function Banker() {
 
     return (
       <div className="Banker">
-         <header className="header-banker">
-          <nav className="navigation">
-           <div className="logo">
-            <img src={logo} alt="Godfather Bank Logo" />
-            <h1>Godfather Banks</h1>
-            </div>
-            <div className="control">
-              <ul>
-                <li><a href="/services">Services</a></li>
-              <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="user-area">
-              <button className="logout-button-banker">Logout</button>
-            </div>
-          </nav>
-        </header>
         <div className="body">
           <div className="List">
           <div className="button-group">
@@ -171,9 +152,9 @@ function Banker() {
         {selectedButton === 'button1' ?
         (selectedRequest ? (
               <div className="SelectedRequest">
-                <h2>Request from *ADD USERNAME HERE*:</h2>
+                <h2>Request from marwannelsayed:</h2>
                 <p1>{selectedRequest}</p1>
-                <h6>*ADD TIME SENT HERE*</h6>
+                <h6>08/06/2002</h6>
                 <div className="AccRejButtons">
           <button 
           className="AcceptButton"
@@ -207,9 +188,9 @@ function Banker() {
             ) : (
               selectedNotif ? (
                 <div className="SelectedNotif">
-                  <h2>Notification from *ADD SOURCE IF AVAILABLE*:</h2>
+                  <h2>Notification from marwannelsayed:</h2>
                   <p1>{selectedNotif}</p1>
-                  <h6>*ADD TIME SENT HERE*</h6>
+                  <h6>08/06/2002</h6>
                 </div>
             ) : (
               <p>Select a notification to display</p>
