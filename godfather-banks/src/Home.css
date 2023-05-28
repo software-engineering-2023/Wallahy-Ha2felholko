@@ -135,36 +135,3 @@ body {
     background-color: #303F9F; /* Darker blue on hover */
   }
   
-  /* Footer Styles */
-  .home-footer {
-    position: absolute;
-    left:0;
-    bottom:0;
-    right:0;
-    background-color: #303F9F;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .home-footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .home-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .home-footer ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  .home-footer ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }

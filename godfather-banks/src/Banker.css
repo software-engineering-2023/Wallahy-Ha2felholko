@@ -249,38 +249,6 @@ body {
     cursor: pointer;
   }
 
-  .footer-banker {
-    position: absolute;
-    left:0;
-    bottom:0;
-    right:0;
-    background-color: #303F9F;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer-banker-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-banker ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-banker ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  .footer-banker ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
   .logo {
     display: flex;
     align-items: center;

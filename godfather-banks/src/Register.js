@@ -214,9 +214,6 @@ const Register = () => {
           </div>
         </div>
       </main>
-      <footer className="registration-footer">
-        <p>&copy; 2023 Godfather Bank. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
