@@ -3,75 +3,104 @@ import logo from './nobg-logo.png';
 import React, { useState } from 'react';
 
 function Banker() {
+  const [infoVisible, setInfoVisible] = useState(false);
   const [selectedButton, setSelectedButton] = useState(null);
   const [selectedRequest, setSelectedRequest] = useState(null);
   const [selectedNotif, setSelectedNotif] = useState(null);
+  const [readRequests, setReadRequests] = useState([]);
+  const [readNotifications, setReadNotifications] = useState([]);
+  const [requests, setRequests] = useState(["Request 1",
+  "Request 2",
+  "Request 3",
+  "Request 44444444444444444444444444444444444444444444444444 with some extra text to overflow",
+  "Request 5",
+  "Have a nice day!",
+  "Have a nice day!!",
+  "Have a nice day!!!",
+  "Have a nice day!!!!",
+  "Have a nice day!!!!!",
+  "Have a nice day!!!!!!",
+  "Have a nice day!!!!!!!",
+  "Have a nice day!!!!!!!!",
+  "Have a nice day!!!!!!!!!",
+  "Have a nice day!!!!!!!!!!",
+  "Have a nice day!!!!!!!!!!!",
+  "Have a nice day!!!!!!!!!!!!",])
+
+  const handleAccept = () => {
+    if (selectedRequest) {
+      setRequests((prevRequests) => {
+        const updatedRequests = [...prevRequests];
+        const index = updatedRequests.indexOf(selectedRequest);
+        if (index !== -1) {
+          updatedRequests.splice(index, 1);
+        }
+        return updatedRequests;
+      });
+      setSelectedRequest(null);
+    }
+  };
+
+  const handleButtonClick2 = () => {
+    setInfoVisible(true);
+  };
+
+  const handleInfoClose = () => {
+    setInfoVisible(false);
+    if (selectedRequest) {
+      setRequests((prevRequests) => {
+        const updatedRequests = [...prevRequests];
+        const index = updatedRequests.indexOf(selectedRequest);
+        if (index !== -1) {
+          updatedRequests.splice(index, 1);
+        }
+        return updatedRequests;
+      });
+      setSelectedRequest(null);
+    }
+  };
 
   const handleButtonClick = (button) => {
       setSelectedButton(button);
       setSelectedRequest(null);
+      setSelectedNotif(null);
   };
 
   const handleClick = (requests) => {
     setSelectedRequest(requests);
+    if (!readRequests.includes(requests)) {
+      setReadRequests([...readRequests, requests]);
+    }
   };
 
   const handleClick2 = (notifications) => {
     setSelectedNotif(notifications);
+    if (!readNotifications.includes(notifications)) {
+      setReadNotifications([...readNotifications, notifications]);
+    }
   };
 
-    const requests = [
-      "Request 1",
-      "Request 2",
-      "Request 3",
-      "Request 44444444444444444444444444444444444444444444444444 with some extra text to overflow",
-      "Request 5",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-      "Have a nice day!",
-    ];
+    
 
     const notifications = [
-      "notification 1",
-      "notification 2",
-      "notification 3",
-      "notification 44444444444444444444444444444444444444444444444444 i see u switched :)",
-      "notification 5",
+      "Notification 1",
+      "Notification 2",
+      "Notification 3",
+      "Notification 44444444444444444444444444444444444444444444444444 switch back to requests :)",
+      "Notification 5",
       "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
-      "Einen schönen Tag noch!",
+      "Einen schönen Tag noch!!",
+      "Einen schönen Tag noch!!!",
+      "Einen schönen Tag noch!!!!",
+      "Einen schönen Tag noch!!!!!",
+      "Einen schönen Tag noch!!!!!!",
+      "Einen schönen Tag noch!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!!!!!",
+      "Einen schönen Tag noch!!!!!!!!!!!!!",
     ];
 
     return (
@@ -115,20 +144,20 @@ function Banker() {
               requests.map((requests, index) => (
                 <a
                   key={index}
-                  className="Requests"
+                  className={`Requests ${readRequests.includes(requests) ? 'read' : ''}`}
                   onClick={() => handleClick(requests)}
                 >
                   {requests}
                 </a>
               ))
             ) : (
-              notifications.map((notification, index) => (
+              notifications.map((notifications, index) => (
                 <a
                   key={index}
-                  className="Notifications"
-                  onClick={() => handleClick2(notification)}
+                  className={`Notifications ${readNotifications.includes(notifications) ? 'read' : ''}`}
+                  onClick={() => handleClick2(notifications)}
                 >
-                  {notification}
+                  {notifications}
                 </a>
             )))
               }
@@ -136,14 +165,52 @@ function Banker() {
             
           </div>
         <div className="RemainingRectangle">
-        {selectedRequest ? (
+        {selectedButton === 'button1' ?
+        (selectedRequest ? (
               <div className="SelectedRequest">
                 <h2>Request from *ADD USERNAME HERE*:</h2>
                 <p1>{selectedRequest}</p1>
                 <h6>*ADD TIME SENT HERE*</h6>
+                <div className="AccRejButtons">
+          <button 
+          className="AcceptButton"
+          onClick={handleAccept}
+          >
+            Accept
+          </button>
+          <button
+            className="RejectButton"
+            onClick={handleButtonClick2}
+          >
+            Reject
+          </button>
+        </div>
+        {infoVisible && (
+          <div className="info-tab">
+            <h3>Info</h3>
+            <p>Are you sure you want to reject?</p>
+            <button className="CancelButton" onClick={handleInfoClose}>
+              Cancel
+            </button>
+            <button className="RejectConfirmButton" onClick={handleInfoClose}>
+              Reject
+            </button>
+          </div>
+          )}
               </div>
             ) : (
-              <p>Select from the panel to display</p>
+              <p>Select a request to display</p>
+            )
+            ) : (
+              selectedNotif ? (
+                <div className="SelectedNotif">
+                  <h2>Notification from *ADD SOURCE IF AVAILABLE*:</h2>
+                  <p1>{selectedNotif}</p1>
+                  <h6>*ADD TIME SENT HERE*</h6>
+                </div>
+            ) : (
+              <p>Select a notification to display</p>
+            )
             )}
         </div>
       </div>

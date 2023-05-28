@@ -110,7 +110,6 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-
   }
   
   .RequestList {
@@ -137,8 +136,21 @@ body {
     text-overflow: ellipsis;
     cursor: pointer;
   }
+
+  .Requests.selected,
+  .Notifications.selected {
+  background-color: #303F9F;
+  color: #FFFFFF;
+}
+
+  .Requests.read,
+  .Notifications.read {
+  font-weight: normal;
+  color: #888;
+  }
   
   .RemainingRectangle {
+    position: relative;
     width: 1040px;
     margin-left: 3px;
     background-color: #f0f0f0;
@@ -146,12 +158,14 @@ body {
     border-radius: 4px;
   }
 
-  .SelectedRequest h2{
+  .SelectedRequest h2,
+  .SelectedNotif h2{
     text-align: left;
     margin-left: 5px;
   }
 
-  .SelectedRequest p1{
+  .SelectedRequest p1,
+  .SelectedNotif p1{
     font-size: 14px;
     text-align: left;
     margin-left: 5px;
@@ -165,6 +179,73 @@ body {
   
   .RemainingRectangle p{
     text-align: center;
+  }
+
+  .AccRejButtons{
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .AcceptButton {
+    background-color: #303F9F;
+    width: 80px;
+    height: 40px;
+    color: #ffffff;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .info-tab {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  
+  .info-tab h3 {
+    margin-top: 0;
+  }
+  
+  .info-tab button {
+    margin-top: 10px;
+  }
+
+  .RejectButton {
+    background-color: #cc4c4c;
+    width: 80px;
+    height: 40px;
+    color: #ffffff;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .CancelButton{
+    width: 60px;
+    height: 30px;
+  }
+
+  .CancelButton{
+    margin: 3px;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .RejectConfirmButton {
+    margin: 3px;
+    width: 60px;
+    height: 30px;
+    background-color: #cc4c4c;
+    color: #ffffff;
+    cursor: pointer;
   }
 
   .footer {
