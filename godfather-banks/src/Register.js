@@ -1,10 +1,11 @@
 import './Register.css';
 import logo from './nobg-logo.png';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 
 
 const Register = () => {
+    const history = useHistory();
     const [stage, setStage] = useState(1);
     const [personalInfo, setPersonalInfo] = useState({
     name: '',
@@ -47,6 +48,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    history.push('/confirmation');
   };
 
   return (
@@ -56,6 +58,9 @@ const Register = () => {
           <div className="registration-logo">
             <img src={logo} alt="Godfather Bank Logo" />
             <h1>Godfather Banks</h1>
+            </div>
+            <div className="registration-creatingaccount">
+            <h2>Registering for an account</h2>
             </div>
             <Link to ='/'><button className="register-home-button">Home</button></Link>
         </nav>

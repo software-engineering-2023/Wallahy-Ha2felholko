@@ -1,0 +1,87 @@
+.confirmation-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .confirmation-registration-header {
+    background-color: #303F9F;
+    padding: 10px 20px;
+  }
+  
+  .confirmation-registration-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .confirmation-registration-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .confirmation-registration-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .confirmation-registration-logo h1 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .Confirmation-home-button {
+    background-color: #FFFFFF;
+    color: #303F9F;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .Confirmation-home-button:hover {
+    background-color: #3070ac;
+    color: #ffffff;
+  }
+  
+  
+  .confirmation-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .confirmation-message {
+    text-align: center;
+  }
+  
+  .confirmation-message img {
+    width: 100px;
+  }
+  
+  .confirmation-message h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-message p {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .confirmation-registration-footer {
+    background-color: #303F9F;
+    color: #fff;
+    padding: 11px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
