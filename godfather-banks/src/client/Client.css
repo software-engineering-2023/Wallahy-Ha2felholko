@@ -1,0 +1,39 @@
+.clientCards{
+    display:flex;
+    align-items: center;
+    margin: 160px 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+
+.clientCards button{
+    flex-basis:27%;
+    letter-spacing: 3px;
+    height:170px;
+    width:50px;
+    cursor:pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 1px solid #03a9f4;
+    color: #fff;
+    background-color: #03a9f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+}
+
+
+.clientCards button:hover {
+    background-color: #377ad1;
+  }
+
+.clientCards button img{
+    height:100px;
+    width:100px;
+}

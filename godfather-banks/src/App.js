@@ -7,9 +7,9 @@ import Register from './Register';
 import RegisterBank from './RegisterBankAccount';
 import ConfirmationBank from './ConfirmationBank';
 import Confirmation from './Confirmation';
-import Client from './Client';
-import Header from './Header';
-import Footer from './Footer';
+import Client from './client/Client';
+import Header from './fixed/Header';
+import Footer from './fixed/Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
  
