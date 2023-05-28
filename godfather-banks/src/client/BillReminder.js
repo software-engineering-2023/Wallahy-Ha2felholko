@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import './BillReminder.css';
 
 const BillReminderButton = () => {
-  const [isPromptVisible, setPromptVisible] = useState(false);
   const [confirmationVisible, setConfirmationVisible] = useState(false);
   const [selectedBill, setSelectedBill] = useState('');
   const [selectedFrequency, setSelectedFrequency] = useState('');
-
-  const handleButtonClick = () => {
-    setPromptVisible(true);
-  };
 
   const handleBillChange = (event) => {
     setSelectedBill(event.target.value);
@@ -21,7 +16,6 @@ const BillReminderButton = () => {
 
   const handleReminderSet = () => {
     // Code to handle setting the bill reminder goes here
-    setPromptVisible(false);
     setConfirmationVisible(true);
 
     setTimeout(() => {
@@ -31,8 +25,7 @@ const BillReminderButton = () => {
 
   return (
     <div className="bill-reminder-container">
-      {isPromptVisible ? (
-        <div className="bill-prompt">
+      <div className="bill-prompt">
           <label htmlFor="billSelect">Select a bill:</label>
           <select id="billSelect" value={selectedBill} onChange={handleBillChange}>
             <option value="">-- Select a bill --</option>
@@ -51,13 +44,8 @@ const BillReminderButton = () => {
             {/* Add more frequency options here */}
           </select>
 
-          <button onClick={handleReminderSet}>Set Reminder</button>
+          <button className="setReminderButton" onClick={handleReminderSet}>Set Reminder</button>
         </div>
-      ) : (
-        <button className="reminder-button" onClick={handleButtonClick}>
-          Set a Bill Reminder
-        </button>
-      )}
 
       {confirmationVisible && <p className="confirmation-message">Reminder set successfully!</p>}
     </div>

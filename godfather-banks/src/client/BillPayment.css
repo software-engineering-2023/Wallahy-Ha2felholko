@@ -33,6 +33,13 @@
   background-color: #6c757d;
 }
 
+.pay-btn{
+  margin-top: 20px;
+}
+
+.back-btn{
+  margin-top: 5px;
+}
 .pay-btn:hover, .back-btn:hover {
   background-color: #0056b3;
 }
