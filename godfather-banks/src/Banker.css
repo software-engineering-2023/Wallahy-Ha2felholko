@@ -5,7 +5,7 @@ body {
   }
   
   /* Header Styles */
-  .header {
+  .header-banker {
     background-color: #303F9F;
     padding: 10px;
   }
@@ -52,10 +52,11 @@ body {
     align-items: center;
   }
   
-  .logout-button {
+  .logout-button-banker {
+    font-size: 13px;
     background-color: #FFFFFF;
     color: #303F9F;
-    border: none;
+    border-style: none;
     border-radius: 4px;
     padding: 8px 16px;
     margin-left: 10px;
@@ -79,31 +80,24 @@ body {
   }
 
   .button-group button {
-    width: 80px;
+    font-size: 12px;
+    color: #4a4a4a;
+    width: 100px;
     height: 100%;
-  }
-
-  .button-group button:first-child {
-    margin-right: 4px;
-    cursor: pointer;
-  }
-
-  .button-group button:last-child {
     margin-left: 4px;
     cursor: pointer;
-  }
-
-  button{
-    background-color:rgb(237, 237, 237);
+    background-color:#eaeaea;
     border-width: 1px;
     border-radius: 4px;
     border-style: solid;
+    border-color: #b3b3b3;
   }
 
-  button.selected{
-    background-color:rgb(188, 188, 188);
+  .button-group button:last-child.selected,
+  .button-group button:first-child.selected{
+    background-color: #b3b3b3;
     border-radius: 4px;
-    border-style: solid;
+    border-style: none;
   }
 
   .List{
@@ -137,10 +131,11 @@ body {
     cursor: pointer;
   }
 
-  .Requests.selected,
-  .Notifications.selected {
+  .Requests.selected.read,
+  .Notifications.selected.read {
   background-color: #303F9F;
   color: #FFFFFF;
+  border-radius: 4px;
 }
 
   .Requests.read,
@@ -189,7 +184,10 @@ body {
   }
 
   .AcceptButton {
+    border-radius: 4px;
     background-color: #303F9F;
+    border-color: #212b6f;
+    font-size: 12px;
     width: 80px;
     height: 40px;
     color: #ffffff;
@@ -220,6 +218,9 @@ body {
 
   .RejectButton {
     background-color: #cc4c4c;
+    border-color: #823030;
+    border-radius: 4px;
+    font-size: 12px;
     width: 80px;
     height: 40px;
     color: #ffffff;
@@ -228,27 +229,27 @@ body {
     cursor: pointer;
   }
 
-  .CancelButton{
-    width: 60px;
-    height: 30px;
-  }
-
-  .CancelButton{
+  .CancelButton {
     margin: 3px;
-    width: 60px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 70px;
     height: 30px;
+    cursor: pointer;
   }
   
   .RejectConfirmButton {
     margin: 3px;
-    width: 60px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 70px;
     height: 30px;
     background-color: #cc4c4c;
     color: #ffffff;
     cursor: pointer;
   }
 
-  .footer {
+  .footer-banker {
     position: absolute;
     left:0;
     bottom:0;
@@ -259,24 +260,24 @@ body {
     text-align: center;
   }
   
-  .footer-content {
+  .footer-banker-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .footer ul {
+  .footer-banker ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .footer ul li {
+  .footer-banker ul li {
     display: inline-block;
     margin-left: 20px;
   }
   
-  .footer ul li a {
+  .footer-banker ul li a {
     color: #FFFFFF;
     text-decoration: none;
   }
