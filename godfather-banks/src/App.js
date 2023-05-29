@@ -8,13 +8,12 @@ import Register from './home/Register';
 import RegisterBank from './home/RegisterBankAccount';
 import ConfirmationBank from './home/ConfirmationBank';
 import Confirmation from './home/Confirmation';
-
 import Client from './client/Client';
 import Bills from './client/Bills';
 import BillPayment from './client/BillPayment';
 import BillReminderButton from './client/BillReminder';
 import Loan from './client/Loan';
-
+import Trans from './client/Trans';
 
 import Footer from './fixed/Footer';
 
@@ -73,6 +72,10 @@ function App() {
             <Route exact path="/client/loan">
               <Header/>
               <Loan/>
+            </Route>
+            <Route exact path="/client/trans">
+              <Header/>
+              <Trans/>
             </Route>
           </Switch>
        </div>
