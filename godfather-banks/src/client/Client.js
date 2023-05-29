@@ -6,6 +6,7 @@ import transactionsIcon from '../img/transaction-icon.png';
 import transfersIcon from '../img/transfers-icon.png';
 import billsIcon from '../img/bills-icon.png';
 
+import {Link} from 'react-router-dom';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import IssueReport from './IssueReport';
@@ -34,8 +35,8 @@ const Client = () => {
                 <button className="clientCardButton" onClick={() => handleClick('/client/bills')}><img src={billsIcon}/><br/>Bills</button>
             </div>
             <div className="report-container">  
-            <CloseAccountButton/>
-                <div className='reportButton'><IssueReport/></div>
+                <Link to ='/IssueReport'><button class="reportButton">report</button></Link>
+                <Link to ='/CloseAccountButton'> <button class="reportButton">close</button></Link>
             </div>
         </>
     );

@@ -72,8 +72,11 @@
     position:relative;
 }
 
-.reportButton{
-    position:absolute;
-    top: 40px;
-    left: 1310px;
+.report-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reportButton {
+  margin-right: 10px;
 }
