@@ -48,6 +48,10 @@
     cursor: pointer;
     font-size: 16px;
   }
+
+  .payment-form button:hover {
+    background-color: #0174aa;    
+  }
   
   .confirmation {
     width: 300px;
