@@ -9,7 +9,7 @@
   }
 
   .clientBalance{
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #333;
   }
@@ -19,18 +19,23 @@
     margin-left: 5px;
     color: #757575;
   }
+
+  .balanceLine{
+    margin-top: 0px;
+    margin-right:  1250px;
+  }
   
 
 .clientCards{
     display:flex;
     align-items: center;
-    margin: 40px 100px;
+    margin: 27px 100px;
     flex-wrap: wrap;
     justify-content: center;
     gap:10px;
 }
 
-.clientCards button{
+.clientCardButton{
     flex-basis:27%;
     letter-spacing: 3px;
     height:170px;
@@ -52,14 +57,16 @@
 }
 
 
-.clientCards button:hover {
-    background-color: #377ad1;
-  }
-
-.clientCards button img{
+.clientCardButton img{
     height:100px;
     width:100px;
 }
+
+.clientCardButton:hover {
+    background-color: #377ad1;
+  }
+
+
 
 .report-container{
     position:relative;

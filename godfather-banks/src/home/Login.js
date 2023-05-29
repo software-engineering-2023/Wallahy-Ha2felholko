@@ -21,7 +21,7 @@ function Login  ()  {
     else if(username=='banker'){
       history.push('/banker');
     }
-    else if(username=='client'){
+    else if(username=='client'||username=="mohamed"){
       history.push('/client');
     }
     else{
