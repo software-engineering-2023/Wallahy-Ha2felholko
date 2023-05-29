@@ -67,6 +67,7 @@
   .form-buttons button {
     margin-left: 10px;
     border-radius: 6px;
+    cursor: pointer;
   }
 
   .form-buttons button:hover {

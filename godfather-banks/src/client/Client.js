@@ -6,8 +6,10 @@ import transactionsIcon from '../img/transaction-icon.png';
 import transfersIcon from '../img/transfers-icon.png';
 import billsIcon from '../img/bills-icon.png';
 
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import IssueReport from './IssueReport';
+import CloseAccountButton from './CloseAccountButton';
 
 const Client = () => {
 
@@ -32,9 +34,9 @@ const Client = () => {
                 <button className="clientCardButton" onClick={() => handleClick('/client/bills')}><img src={billsIcon}/><br/>Bills</button>
             </div>
             <div className="report-container">  
+            <CloseAccountButton/>
                 <div className='reportButton'><IssueReport/></div>
             </div>
-            
         </>
     );
   };

@@ -12,9 +12,9 @@ function Login  ()  {
   const handleLogin = (e) => {
     e.preventDefault();
     if (!username || !password) {
-        setErrorMessage('Please fill in the textboxes');
+        setErrorMessage('Please fill in the required fields');
     }
-    else if(username=="admin"){
+    else if(username=='admin'){
       history.push('/admin');
 
     }

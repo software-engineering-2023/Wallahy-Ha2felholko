@@ -26,7 +26,7 @@ function Home() {
         </header>
         <main className="home-content">
           <div className="home-hero-section">
-            <h2>Welcome to Godfather Banks</h2>
+            <h2>Welcome To Godfather Banks</h2>
             <p>
               TRUST YOU MUST
             </p>

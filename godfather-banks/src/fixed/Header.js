@@ -2,8 +2,14 @@ import './Header.css';
 import logo from '../img//nobg-logo.png';
 import {Link} from 'react-router-dom';
 import NotificationDropdown from './NotificationDropdown';
+import { useHistory } from 'react-router-dom';
+
+
 
 function Header() {
+
+  const history = useHistory();
+
     return (
         <header className="home-header">
         <nav className="home-navigation">
