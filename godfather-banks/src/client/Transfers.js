@@ -46,37 +46,8 @@ const Transfers = () => {
 
 
           <div className="form-group-Transfers">
-            <label htmlFor="amount">Transfer Amount:</label>
-            <input
-              type="text"
-              id="amount"
-              name="amount"
-              value={TransfersInfo.amount}
-              onChange={handleInputChange}
-              required
-            />
-          
 
-            <label htmlFor="TransferTo">Account Number:</label>
-            <input
-              type="text"
-              id="TransferTo"
-              name="TransferTo"
-              value={TransfersInfo.TransferTo}
-              onChange={handleInputChange}
-              required
-            />
-
-            <label htmlFor="TransferTo">Message:</label>
-            <input
-              type="text"
-              id="Message"
-              name="Message"
-              value={TransfersInfo.Message}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="TransferType">Transfer Type:</label>
+          <label htmlFor="TransferType">Transfer Type:</label>
             <select
               id="TransferType"
               name="TransferType"
@@ -90,6 +61,41 @@ const Transfers = () => {
               <option value="personal">International </option>
               
             </select>
+
+
+           
+          
+
+            <label htmlFor="TransferTo">Account Number:</label>
+            <input
+              type="text"
+              id="TransferTo"
+              name="TransferTo"
+              value={TransfersInfo.TransferTo}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="amount">Transfer Amount:</label>
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              value={TransfersInfo.amount}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="TransferTo">Message:</label>
+            <input
+              type="text"
+              id="Message"
+              name="Message"
+              value={TransfersInfo.Message}
+              onChange={handleInputChange}
+              required
+            />
+            
 
 
           </div>
