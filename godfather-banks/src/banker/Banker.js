@@ -194,24 +194,15 @@ function Banker() {
           {infoVisible2 && (
                 <div className="info-tab2">
                   <h3>Client's Info</h3>
-                  <p>Full Name: Marwan Yehia Elsayed Abdelhamid
-                  <br />
-                     Nationality: Egyptian
-                     <br />
-                     Date Of Birth: 06/08/2002
-                     <br />
-                     Gender: Male
-                     <br />
-                     National/Passport ID: XXXXXXXX
-                     <br />
-                     Phone Number: 01066292912
-                     <br />
-                     Employment Status: Employed
-                     <br />
-                     Source Of Funds: Job
-                     <br />
-                     Type Of Account: Credit
-                  </p>
+                  <p>• Full Name: Marwan Yehia Elsayed Abdelhamid</p>
+                  <p>• Nationality: Egyptian</p>
+                  <p>• Date Of Birth: 08/06/2002</p>
+                  <p>• Gender: Male</p>
+                  <p>• National/Passport ID: XXXXXXXX</p>
+                  <p>• Phone Number: 01066292912</p>
+                  <p>• Employment Status: Employed</p>
+                  <p>• Source Of Funds: Job</p>
+                  <p>• Type Of Account: Credit</p>
                   <button className="CancelButton" onClick={handleInfoClose3}>
                     Cancel
                   </button>

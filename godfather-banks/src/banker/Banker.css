@@ -82,6 +82,7 @@ body {
 
   .Requests.read,
   .Notifications.read {
+  border-radius: 0px;
   font-weight: normal;
   color: #888;
   background-color: #ffffff;
@@ -177,6 +178,11 @@ body {
 
   .info-tab2 h3 {
     margin-top: 0;
+  }
+
+  .info-tab2 p {
+    margin: 5px;
+    text-align: left;
   }
 
   .info-tab2 button {
