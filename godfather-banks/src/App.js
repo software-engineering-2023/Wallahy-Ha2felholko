@@ -70,7 +70,7 @@ function App() {
               <Header/>
               <BillReminderButton/>
             </Route>
-            <Route exact path="/client/Loan">
+            <Route exact path="/client/loan">
               <Header/>
               <Loan/>
             </Route>

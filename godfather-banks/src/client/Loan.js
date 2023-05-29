@@ -42,7 +42,6 @@ const Loan = () => {
     <div className="loan-page">
       <div className="loan-form">
         <h2>Loan Application</h2>
-        {loanInfo.submitted && <p className="loan-confirmation">Loan requested successfully!</p>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="loanType">Loan Type:</label>
@@ -96,6 +95,7 @@ const Loan = () => {
           </div>
 
           <button type="submit" className="loan-submit-button">Submit</button>
+          {loanInfo.submitted && <p className="loan-confirmation">Loan requested successfully!</p>}
         </form>
       </div>
     </div>

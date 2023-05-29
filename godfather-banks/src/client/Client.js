@@ -26,7 +26,7 @@ const Client = () => {
             <hr className="balanceLine"/>
             <div className="clientCards">
                 <button className="clientCardButton"><img src={creditCardIcon}/><br/>Credit Cards</button>
-                <button className="clientCardButton"><img src={loansIcon}/><br/>Loans</button>
+                <button className="clientCardButton" onClick={() => handleClick('/client/loan')}><img src={loansIcon}/><br/>Loans</button>
                 <button className="clientCardButton"><img src={transactionsIcon}/><br/>Transactions</button>
                 <button className="clientCardButton" ><img src={transfersIcon}/><br/>Transfers</button>
                 <button className="clientCardButton" onClick={() => handleClick('/client/bills')}><img src={billsIcon}/><br/>Bills</button>

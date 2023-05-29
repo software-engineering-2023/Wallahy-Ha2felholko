@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 79vh;
+    height: 78vh;
   }
   
   .loan-form {
@@ -11,6 +11,7 @@
     background-color: #f1f1f1;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 65vh;
   }
   
   .loan-form h2 {
@@ -37,13 +38,15 @@
   }
   
   .loan-form .loan-submit-button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
+    left: 100px;
   }
   
   .loan-form .loan-submit-button:hover {
@@ -54,7 +57,7 @@
     text-align: center;
     color: green;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   
