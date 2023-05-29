@@ -8,18 +8,17 @@ import Register from './home/Register';
 import RegisterBank from './home/RegisterBankAccount';
 import ConfirmationBank from './home/ConfirmationBank';
 import Confirmation from './home/Confirmation';
-
 import Client from './client/Client';
 import Bills from './client/Bills';
 import BillPayment from './client/BillPayment';
 import BillReminderButton from './client/BillReminder';
 import Loan from './client/Loan';
-import Transfers from './client/Transfers';
 
 
 import Footer from './fixed/Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreditCard from './client/CreditCard';
 
  
 function App() {
@@ -74,10 +73,6 @@ function App() {
             <Route exact path="/client/loan">
               <Header/>
               <Loan/>
-            </Route>
-            <Route exact path="/client/transfers">
-              <Header/>
-              <Transfers/>
             </Route>
           </Switch>
        </div>

@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .body {
+    margin: 3px;
+    display: flex;
+    height: 568px;
+  }
+
+  .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  }
+
+  .button-group button {
+    font-size: 12px;
+    color: #4a4a4a;
+    width: 100px;
+    height: 100%;
+    margin-left: 4px;
+    cursor: pointer;
+    background-color:#eaeaea;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #b3b3b3;
+  }
+
+  .button-group button:last-child.selected,
+  .button-group button:first-child.selected{
+    background-color: #b3b3b3;
+    border-radius: 4px;
+    border-style: none;
+  }
+
+  .List{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .RequestList {
+    background-color: #f7f7f7;
+    padding: 10px;
+    width: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 4px;
+  }
+  
+  .Requests,
+  .Notifications {
+    padding: 10px;
+    color:#4e535e;
+    background-color: #C5CAE9;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #c2c4d8;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+
+  .Requests.selected.read,
+  .Notifications.selected.read {
+  background-color: #303F9F;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+  .Requests.read,
+  .Notifications.read {
+  border-radius: 0px;
+  font-weight: normal;
+  color: rgb(196, 196, 196);
+  background-color: #f7f7f7;
+  }
+  
+  .RemainingRectangle {
+    position: relative;
+    width: 1040px;
+    margin-left: 3px;
+    background-color: #f0f0f0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+
+  .SelectedNotif,
+  .SelectedRequest{
+    margin: 5px;
+  }
+
+  .SelectedRequest h2,
+  .SelectedNotif h2{
+    text-align: left;
+    background-color: #C5CAE9;
+  }
+
+  .SelectedRequest p1,
+  .SelectedNotif p1{
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .RemainingRectangle h6{
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .RemainingRectangle p{
+    text-align: center;
+  }
+
+  .AccRejButtons{
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .AcceptButton {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-color: #303F9F;
+    font-size: 12px;
+    width: 80px;
+    height: 40px;
+    color: #303F9F;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .AcceptButton:hover{
+    background-color: #303F9F;
+    border-color: #303F9F;
+    color: #ffffff;
+  }
+
+  .RejectButton {
+    background-color: #ffffff;
+    border-color: #cc4c4c;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 80px;
+    height: 40px;
+    color: #cc4c4c;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .RejectButton:hover{
+    background-color: #cc4c4c;
+    border-color: #cc4c4c;
+    color: #ffffff;
+  }
+
+  .info-tab {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  
+  .info-tab h3 {
+    margin-top: 0;
+  }
+  
+  .info-tab button {
+    margin-top: 10px;
+  }
+
+  .info-tab2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+
+  .info-tab2 h3 {
+    margin-top: 0;
+  }
+
+  .info-tab2 p {
+    margin: 5px;
+    text-align: left;
+  }
+
+  .info-tab2 button {
+    margin-top: 10px;
+  }
+
+  .UserInfoButton{
+    border-radius: 4px;
+    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .CancelButton {
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 75px;
+    height: 30px;
+    cursor: pointer;
+    border-color: #a4a4a4;
+    font-weight: bold;
+  }
+
+  .CancelButton:hover {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
+    color: #FFFFFF;
+  }
+  
+  .RejectConfirmButton {
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 75px;
+    height: 30px;
+    background-color: #ffffff;
+    font-weight: bold;
+    border-color: #cc4c4c;
+    color: #cc4c4c;
+    cursor: pointer;
+  }
+
+  .RejectConfirmButton:hover{
+    background-color: #cc4c4c;
+    border-color: #cc4c4c;
+    color: #ffffff;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Adjust the height as per your logo size */
+    margin-right: 10px;
+  }
