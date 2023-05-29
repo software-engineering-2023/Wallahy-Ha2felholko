@@ -239,7 +239,7 @@ const handleAnnouncementChange = (event) => {
               requests.map((request, index) => (
                 <a
                   key={index}
-                  className={`Requestsali ${selectedRequest === request ? 'selected' : ''}`}
+                  className={`Requests ${selectedRequest === request ? 'selected' : ''}`}
                   onClick={() => handleClick(request.name)}
                 >
                   {request.name}
