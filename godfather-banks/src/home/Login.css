@@ -78,6 +78,7 @@ body {
   }
   
   .login2-button {
+    margin-bottom:25px;
     background-color: #3F51B5;
     color: #FFFFFF;
     border: none;
