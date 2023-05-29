@@ -5,6 +5,7 @@ const PayCreditBill = () => {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [amountDue, setAmountDue] = useState(10000);
   const [isPaid, setIsPaid] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   const handlePaymentMethodChange = (event) => {
     setPaymentMethod(event.target.value);
@@ -12,6 +13,10 @@ const PayCreditBill = () => {
 
   const handlePayClick = () => {
     setIsPaid(true);
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   const renderPaymentForm = () => {
@@ -26,6 +31,8 @@ const PayCreditBill = () => {
             <option value="bank">Bank Account</option>
             <option value="paypal">PayPal</option>
           </select>
+          <label className="yarab">Amount:</label>
+          <input value={inputValue} onChange={handleChange} type="text"></input>
         </div>
         <button disabled={!paymentMethod} onClick={handlePayClick}>
           Pay
@@ -38,8 +45,7 @@ const PayCreditBill = () => {
     return (
       <div className="confirmation">
         <h2>Payment Confirmation</h2>
-        <p>Payment of EGP {amountDue} successfully made via {paymentMethod}.</p>
-        <p>You're all good for this month !</p>
+        <p>Payment of EGP {inputValue} successfully made via {paymentMethod}.</p>
       </div>
     );
   };

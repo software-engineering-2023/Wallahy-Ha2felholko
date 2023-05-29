@@ -67,16 +67,9 @@
   }
 
 
-
-.report-container{
-    position:relative;
-}
-
 .report-container {
+  padding-top:45px;
   display: flex;
   justify-content: space-between;
 }
 
-.reportButton {
-  margin-right: 10px;
-}

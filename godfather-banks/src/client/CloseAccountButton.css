@@ -6,6 +6,7 @@
     font-size: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 6px;
   }
   
   .close-account-button:hover {
