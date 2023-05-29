@@ -1,13 +1,41 @@
+.clientTitle {
+    font-family: "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+
+  .clientBalance{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .clientBalanceLabel{
+    margin-top: 0px;
+    margin-left: 5px;
+    color: #757575;
+  }
+
+  .balanceLine{
+    margin-top: 0px;
+    margin-right:  1250px;
+  }
+  
+
 .clientCards{
     display:flex;
     align-items: center;
-    margin: 160px 100px;
+    margin: 27px 100px;
     flex-wrap: wrap;
     justify-content: center;
     gap:10px;
 }
 
-.clientCards button{
+.clientCardButton{
     flex-basis:27%;
     letter-spacing: 3px;
     height:170px;
@@ -19,21 +47,33 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    border-color: #757575;
     border-radius: 10px;
-    border: 1px solid #03a9f4;
-    color: #fff;
-    background-color: #03a9f4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.5, 0.5);
     transition: background-color 0.3s ease;
 
 }
 
 
-.clientCards button:hover {
+.clientCardButton img{
+    height:100px;
+    width:100px;
+}
+
+.clientCardButton:hover {
     background-color: #377ad1;
   }
 
-.clientCards button img{
-    height:100px;
-    width:100px;
+
+
+.report-container{
+    position:relative;
+}
+
+.reportButton{
+    position:absolute;
+    top: 40px;
+    left: 1310px;
 }

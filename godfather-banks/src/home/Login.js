@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css';
 import logo from '../img/nobg-logo.png';
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 
 function Login  ()  {
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -12,7 +13,23 @@ function Login  ()  {
     e.preventDefault();
     if (!username || !password) {
         setErrorMessage('Please fill in the textboxes');
-    }};
+    }
+    else if(username=="admin"){
+      history.push('/admin');
+
+    }
+    else if(username=='banker'){
+      history.push('/banker');
+    }
+    else if(username=='client'||username=="mohamed"){
+      history.push('/client');
+    }
+    else{
+      setErrorMessage('Incorrect username');
+    }
+  
+  };
+
 
   return (
     <div className="login-page">
@@ -47,7 +64,7 @@ function Login  ()  {
               className={errorMessage && !password ? 'error' : ''}
             />
 
-            {errorMessage && (!username || !password) && (
+            {errorMessage && ((!username || !password)|| username!='admin' ||username!='client'||username!='banker')&& (
               <p className="error-message">{errorMessage}</p>
             )}
 

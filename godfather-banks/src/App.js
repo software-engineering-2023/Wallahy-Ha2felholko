@@ -1,3 +1,4 @@
+import Header from './fixed/Header';
 
 import Home from './home/Home';
 import Banker from './banker/Banker';
@@ -7,11 +8,18 @@ import Register from './home/Register';
 import RegisterBank from './home/RegisterBankAccount';
 import ConfirmationBank from './home/ConfirmationBank';
 import Confirmation from './home/Confirmation';
+
 import Client from './client/Client';
-import Header from './fixed/Header';
+import Bills from './client/Bills';
+import BillPayment from './client/BillPayment';
+import BillReminderButton from './client/BillReminder';
+import Loan from './client/Loan';
+
+
 import Footer from './fixed/Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
  
 function App() {
   return (
@@ -49,6 +57,22 @@ function App() {
             <Route exact path="/client">
               <Header/>
               <Client />
+            </Route>
+            <Route exact path="/client/bills">
+              <Header/>
+              <Bills/>
+            </Route>
+            <Route exact path="/client/bills/pay">
+              <Header/>
+              <BillPayment/>
+            </Route>
+            <Route exact path="/client/bills/set">
+              <Header/>
+              <BillReminderButton/>
+            </Route>
+            <Route exact path="/client/loan">
+              <Header/>
+              <Loan/>
             </Route>
           </Switch>
        </div>
