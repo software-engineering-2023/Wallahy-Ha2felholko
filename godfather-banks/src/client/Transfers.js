@@ -6,6 +6,7 @@ const Transfers = () => {
     amount: '',
     TransferTo: '',
     Message:'',
+    TransferType:'',
     submitted: false,
   });
 
@@ -31,6 +32,7 @@ const Transfers = () => {
         amount: '',
         TransferTo: '',
         Message:'',
+        TransferType:'',
         submitted: false,
       });
     }, 2000);
@@ -74,7 +76,20 @@ const Transfers = () => {
               onChange={handleInputChange}
               required
             />
-
+            <label htmlFor="TransferType">Transfer Type:</label>
+            <select
+              id="TransferType"
+              name="TransferType"
+              value={TransfersInfo.TransferType}
+              onChange={handleInputChange}
+              required
+            >\
+              <option value="car">Select Transfer Type </option>
+              <option value="car">Internal </option>
+              <option value="personal">Domestic </option>
+              <option value="personal">International </option>
+              
+            </select>
 
 
           </div>

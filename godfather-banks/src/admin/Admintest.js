@@ -266,7 +266,7 @@ const handleAnnouncementChange = (event) => {
        placeholder="Enter your announcement here..."
       />
        <button
-          className={`button-arounder ${loading ? 'loading' : ''}`}
+          className={`button-arounder ${loading ? 'loading' : ''} SubmitButtonn`}
           onClick={handleAnnouncementSubmit}
           disabled={loading}
         >

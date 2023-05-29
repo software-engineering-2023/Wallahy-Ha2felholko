@@ -306,7 +306,7 @@
     position: absolute;
     top: 170%;
     left: 90%;
-    transform: scale(1.5);
+    transform: scale(1.1);
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -328,11 +328,29 @@
     color: #ffffff;
   }
 
-  .Requestsali {
+  .Requests {
     color: black; /* Default color for requests */
   }
   
-  .Requestsali.selected {
+  .Requests.selected {
     color: white; /* Color for selected requests */
     font-weight: bold; /* Additional style for selected requests */
+  }
+
+  .SubmitButtonn {
+    /* Button styles */
+    width: 20%;
+    padding: 10px;
+    left: 85%;
+    top:85%;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust the value as per your requirements */
+    background: hsl(224, 65%, 52%);
+    padding: 6px;
+  
+   
   }
