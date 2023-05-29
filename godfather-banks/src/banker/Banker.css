@@ -133,15 +133,40 @@ body {
 
   .AcceptButton {
     border-radius: 4px;
-    background-color: #303F9F;
-    border-color: #212b6f;
+    background-color: #ffffff;
+    border-color: #303F9F;
     font-size: 12px;
     width: 80px;
     height: 40px;
-    color: #ffffff;
+    color: #303F9F;
     margin: 5px;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  .AcceptButton:hover{
+    background-color: #303F9F;
+    border-color: #303F9F;
+    color: #ffffff;
+  }
+
+  .RejectButton {
+    background-color: #ffffff;
+    border-color: #cc4c4c;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 80px;
+    height: 40px;
+    color: #cc4c4c;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .RejectButton:hover{
+    background-color: #cc4c4c;
+    border-color: #cc4c4c;
+    color: #ffffff;
   }
 
   .info-tab {
@@ -199,40 +224,40 @@ body {
     cursor: pointer;
   }
 
-  .RejectButton {
-    background-color: #cc4c4c;
-    border-color: #823030;
-    border-radius: 4px;
-    font-size: 12px;
-    width: 80px;
-    height: 40px;
-    color: #ffffff;
-    margin: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
   .CancelButton {
     margin: 3px;
     border-radius: 4px;
     font-size: 12px;
-    width: 70px;
+    width: 75px;
     height: 30px;
     cursor: pointer;
     border-color: #a4a4a4;
+    font-weight: bold;
+  }
+
+  .CancelButton:hover {
+    background-color: #a4a4a4;
+    border-color: #a4a4a4;
+    color: #FFFFFF;
   }
   
   .RejectConfirmButton {
     margin: 3px;
     border-radius: 4px;
     font-size: 12px;
-    width: 70px;
+    width: 75px;
     height: 30px;
-    background-color: #cc4c4c;
+    background-color: #ffffff;
     font-weight: bold;
-    border-color: #823030;
-    color: #ffffff;
+    border-color: #cc4c4c;
+    color: #cc4c4c;
     cursor: pointer;
+  }
+
+  .RejectConfirmButton:hover{
+    background-color: #cc4c4c;
+    border-color: #cc4c4c;
+    color: #ffffff;
   }
 
   .logo {
