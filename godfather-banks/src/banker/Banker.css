@@ -47,7 +47,7 @@ body {
   }
   
   .RequestList {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     padding: 10px;
     width: 400px;
     box-sizing: border-box;
@@ -84,8 +84,8 @@ body {
   .Notifications.read {
   border-radius: 0px;
   font-weight: normal;
-  color: #888;
-  background-color: #ffffff;
+  color: rgb(196, 196, 196);
+  background-color: #f7f7f7;
   }
   
   .RemainingRectangle {
