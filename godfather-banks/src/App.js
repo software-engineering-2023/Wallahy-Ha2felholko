@@ -13,6 +13,7 @@ import Client from './client/Client';
 import Bills from './client/Bills';
 import BillPayment from './client/BillPayment';
 import BillReminderButton from './client/BillReminder';
+import Loan from './client/Loan';
 
 
 import Footer from './fixed/Footer';
@@ -68,6 +69,10 @@ function App() {
             <Route exact path="/client/bills/set">
               <Header/>
               <BillReminderButton/>
+            </Route>
+            <Route exact path="/client/Loan">
+              <Header/>
+              <Loan/>
             </Route>
           </Switch>
        </div>
