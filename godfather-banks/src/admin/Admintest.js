@@ -239,7 +239,7 @@ const handleAnnouncementChange = (event) => {
               requests.map((request, index) => (
                 <a
                   key={index}
-                  className={`Requests ${selectedRequest === request ? 'selected' : ''}`}
+                  className={`Requestsali ${selectedRequest === request ? 'selected' : ''}`}
                   onClick={() => handleClick(request.name)}
                 >
                   {request.name}
@@ -270,7 +270,7 @@ const handleAnnouncementChange = (event) => {
           onClick={handleAnnouncementSubmit}
           disabled={loading}
         >
-          {loading ? 'Loading...' : 'Submit Announcement'}
+          {loading ? 'Loading...' : 'Submit'}
         </button>
   {announcementSent && (
      <div className="AnnouncementSentMessage">

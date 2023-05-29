@@ -146,12 +146,7 @@
  
   }
   
-  button {
-    background: white;
-    border: solid 2px black;
-    padding: .375em 1.125em;
-    font-size: 1rem;
-  }
+ 
   
   .button-arounder {
     font-size: 2rem;
@@ -195,6 +190,7 @@
     border-top-right-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
+    cursor: pointer;
   }
   
  
@@ -235,11 +231,31 @@
   .button-groupali {
     display: flex;
     justify-content: center; /* Move buttons to the right */
+    color: #4a4a4a;
+    margin-right: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 8px 16px;
+  
+    
+  }
+  .button-groupali button:last-child.selected,
+  .button-groupali button:first-child.selected{
+    background-color: #b3b3b3;
+    border-radius: 5px;
+    border-style: none;
+    margin-left: 0px;
+  }
+  .button-groupali button:last-child {
+    margin-right: 0; /* Remove margin-right from the last button */
+  }
+
+
+  .button-groupali button:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
   }
   
-  .button-groupali button {
-    margin-left: 50px; /* Add margin-left for spacing between buttons */
-  }
+  
   
   .AnnouncementTextarea{
     background-color: #dddddd;
@@ -282,7 +298,7 @@
     left: 50%; /* adjust the value to move the textarea horizontally */
     transform: translate(-50%, -50%); /* centers the textarea */
     resize: none;
-    color: rgb(15, 13, 156);
+    color: green;
     font-family: Georgia, serif;
   }
 
@@ -297,6 +313,9 @@
     text-overflow: ellipsis;
     
   }
+  .proceed-button:hover{
+    cursor: pointer;
+  }
   
   .ButtonContainer {
     
@@ -306,7 +325,14 @@
   .RequestList a.selected {
     /* Styles for the selected (highlighted) request */
     background-color: #303F9F;
-    color: #000000;
+    color: #ffffff;
   }
 
- 
+  .Requestsali {
+    color: black; /* Default color for requests */
+  }
+  
+  .Requestsali.selected {
+    color: white; /* Color for selected requests */
+    font-weight: bold; /* Additional style for selected requests */
+  }
