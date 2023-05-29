@@ -25,7 +25,7 @@ const Client = () => {
             <p className="clientBalanceLabel"> Account Balance</p>
             <hr className="balanceLine"/>
             <div className="clientCards">
-                <button className="clientCardButton"><img src={creditCardIcon}/><br/>Credit Cards</button>
+                <button className="clientCardButton" onClick={() => handleClick('/client/credit')}><img src={creditCardIcon}/><br/>Credit Cards</button>
                 <button className="clientCardButton" onClick={() => handleClick('/client/loan')}><img src={loansIcon}/><br/>Loans</button>
                 <button className="clientCardButton"><img src={transactionsIcon}/><br/>Transactions</button>
                 <button className="clientCardButton" ><img src={transfersIcon}/><br/>Transfers</button>

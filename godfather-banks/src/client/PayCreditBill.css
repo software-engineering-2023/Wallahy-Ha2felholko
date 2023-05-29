@@ -1,0 +1,71 @@
+.pay-credit-bill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-form {
+    width: 300px;
+  }
+  
+  .payment-form h2 {
+    margin-bottom: 10px;
+  }
+  
+  .payment-form p {
+    margin-bottom: 20px;
+  }
+  
+  .payment-form div {
+    margin-bottom: 20px;
+  }
+  
+  .payment-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .payment-form select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .payment-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #03a9f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .confirmation {
+    width: 300px;
+  }
+  
+  .confirmation h2 {
+    margin-bottom: 10px;
+  }
+  
+  .confirmation p {
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  

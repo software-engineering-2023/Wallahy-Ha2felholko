@@ -1,0 +1,62 @@
+.creditHeader{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+.topBgad{
+    background-color: #c5cae9;
+    margin-top:0px;
+}
+
+.topContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content:center ;
+}
+
+.cardSelect{
+    font-size: 50px;
+    width: 160px;
+    margin-left: 640px;
+    margin-top: 5px;
+
+}
+
+
+.creditParentContainer{
+    display:flex;
+    flex-direction: row;
+    height:100%;
+}
+
+.creditFlexItem{    
+    flex:1;
+    width:33%;
+    height:520px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.creditSubHead{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom:50px;
+}
+
+.creditTransactions{
+    align-items: center;
+}
+
+.creditTransactionsComp{
+    
+}
+
+.creditPayBill{
+
+}
+
+.creditPoints{
+
+}
