@@ -20,7 +20,7 @@ const BillReminderButton = () => {
 
     setTimeout(() => {
       setConfirmationVisible(false);
-    }, 1000);
+    }, 3000);
   };
 
   return (

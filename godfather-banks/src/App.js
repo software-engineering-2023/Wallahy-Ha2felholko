@@ -18,6 +18,7 @@ import Trans from './client/Trans';
 import Footer from './fixed/Footer';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreditCard from './client/CreditCard';
 
  
 function App() {
@@ -73,6 +74,10 @@ function App() {
               <Header/>
               <Loan/>
             </Route>
+            <Route exact path="/client/credit">
+              <Header/>
+              <CreditCard/>
+              </Route>
             <Route exact path="/client/trans">
               <Header/>
               <Trans/>
